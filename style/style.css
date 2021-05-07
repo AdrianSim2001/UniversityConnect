@@ -1,0 +1,572 @@
+/*
+Author: Adrian Sim Huan Tze
+Created: 12 November 2020
+Last modified: 12 November 2020
+Description: Assignment 2
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* index.php */
+
+#navigation{
+    border: none;
+    width: 80%;
+    box-shadow: none;
+    margin-top: 5px;
+}
+
+a.navigate{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: #03e9f4;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.377));
+}
+
+a.navigate:nth-child(1){
+    filter: hue-rotate(290deg);
+}
+
+a.navigate:nth-child(3){
+    filter: hue-rotate(110deg);
+}
+
+a.navigate:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+
+a.navigate span{
+    position: absolute;
+    display: block;
+}
+
+a.navigate span:nth-child(1){
+    top:0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background:linear-gradient(90deg, transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1{
+    0%
+    {
+        left: -100%;
+    }
+    50%, 100%
+    {
+        left: 100%;
+    }
+}
+
+a.navigate span:nth-child(2){
+    top:0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background:linear-gradient(180deg, transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2{
+    0%
+    {
+        top: -100%;
+    }
+    50%, 100%
+    {
+        top: 100%;
+    }
+}
+
+a.navigate span:nth-child(3){
+    bottom:0;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background:linear-gradient(270deg, transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate3{
+    0%
+    {
+        right: -100%;
+    }
+    50%, 100%
+    {
+        right: 100%;
+    }
+}
+
+a.navigate span:nth-child(4){
+    bottom:-100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background:linear-gradient(360deg, transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4{
+    0%
+    {
+        bottom: -100%;
+    }
+    50%, 100%
+    {
+        bottom: 100%;
+    }
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background: #050801;
+}
+
+/*body style*/
+
+body h1,p,td,h2{
+    font-family: "Montserrat", sans-serif;
+}
+
+body h1{
+    padding: 40px 40px;
+    background-color:  #050801;
+    width:50%;
+    border: 4px solid #03e9f4;
+    color: #03e9f4;
+    justify-content:center;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align:center;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 20px #03e9f4,
+    0 0 40px #03e9f4,
+    0 0 180px #03e9f4;
+}
+
+body h2{
+     color:#050801;
+     background-color: violet;
+     padding: 20px 20px;
+     margin: 0 auto;
+     margin-top: 100px;
+     margin-bottom:30px;
+     border: violet solid 2px;
+     width:40%;
+     text-align:center;
+     box-shadow: 0 0 5px violet,
+    0 0 10px violet,
+    0 0 20px violet,
+    0 0 100px violet;
+}
+
+body h3{
+    padding: 40px 40px;
+    background-color:  #050801;
+    width:25%;
+    border: 4px solid blue;
+    color: blue;
+    justify-content:center;
+    margin: 60px auto;
+    text-align:center;
+    box-shadow: 0 0 5px blue,
+    0 0 20px blue,
+    0 0 40px blue,
+    0 0 180px blue;
+}
+
+
+table{
+    border: darkorange solid 2px;
+    padding:30px 30px;
+    margin:0 auto;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    width: 70%;
+    box-shadow: 0 0 5px darkorange,
+    0 0 5px darkorange,
+    0 0 5px darkorange,
+    0 0 30px darkorange;
+}
+
+table td{
+    color:darkorange;
+    padding: 20px 20px;
+    margin:0 auto;
+    text-align:left;
+}
+
+#declaration{
+    color:#eff0f1;
+    justify-content:center;
+    width: 60%;
+    margin: 40px auto;
+    text-align:center;
+    margin-bottom: 200px;
+}
+
+#declaration p{
+    background-color:darkred;
+    padding: 20px 20px;
+    border-radius: 50px;
+    border: #eff0f1 solid 2px;
+}
+
+#email a:hover{
+    color: #0088a9;
+    transition: all 0.3s ease 0s;
+    font-size:larger;
+}
+
+#email a{
+    color: rgb(78, 236, 78);
+    text-decoration: none;
+}
+
+/*footer style*/
+
+footer{
+    padding: 30px 5%;
+    background-color: #edf0f1;
+}
+
+footer p#footer{
+    color: #24252a;
+    background-color: #edf0f1;
+    text-align:center;
+    font-size: small;
+}
+
+footer table#footer{
+    margin-bottom: 30px;
+    background-color: inherit;
+    box-shadow: none;
+    border: none;
+    width: 90%;
+}
+
+footer a{
+    color: rgba(46,49,49,0.8);
+    background: #edf0f1;
+    letter-spacing: 2px;
+    box-shadow: none;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+footer a:hover{
+    color: rgba(46,49,49,1);
+    background: #edf0f1;;
+    letter-spacing: 4px;
+    box-shadow: none;
+}
+
+footer table ul li img{
+    width: 40px;
+    height: 40px;
+    background-color: #edf0f1;
+}
+
+footer table ul li{
+    display: inline-block;
+    background-color: #edf0f1;
+    list-style: none;
+}
+
+footer table td ul{
+    background-color: #edf0f1;
+}
+
+footer table thead td{
+    color: #24252a;
+    background-color: #edf0f1;
+    font-weight:bolder;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+footer table tbody td{
+    color: grey;
+    background-color: #edf0f1;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+footer a img{
+    background-color:#24252a;
+    padding: 2px;
+    max-width: 15%;
+    height:auto;
+    clear:both;
+    border-radius:150px;
+}
+
+/*  signup.php */
+
+form{
+    border: none;
+    margin: 20px 30px;
+    padding: 30px 30px;
+    font-family: "Montserrat";
+    color:#edf0f1;
+    margin-bottom: 250px;
+}
+
+form p{
+    margin: 12px 10px;
+    color:#edf0f1;
+}
+
+form fieldset{
+    border: darkorange solid 5px;
+    margin: 20px 30px;
+    padding: 30px 30px;
+    box-shadow: 0 0 5px darkorange,
+        0 0 10px darkorange,
+        0 0 20px darkorange,
+        0 0 50px darkorange;
+}
+
+form legend{
+    font-family: "Montserrat";
+    color:#edf0f1;
+    padding: 20px 20px;
+    background-color: #050801;
+    border: solid 2px blue;
+    box-shadow: 0 0 5px blue,
+        0 0 10px blue,
+        0 0 20px blue,
+        0 0 50px blue;
+}
+
+form label{
+    font-family: "Montserrat";
+    color: #edf0f1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+form input[type=text]{
+    color: #edf0f1;
+    border: blue solid 2px;
+    background: #050801;
+    border-radius: 50px;
+    width: 20%;
+    padding: 12px 20px;
+    margin: 10px 10px;
+}
+
+form input[type=email]{
+    color: #edf0f1;
+    border: blue solid 2px;
+    background: #050801;
+    border-radius: 50px;
+    width: 20%;
+    padding: 12px 20px;
+    margin: 10px 10px;
+}
+
+form input[type=password]{
+    color: #edf0f1;
+    border: blue solid 2px;
+    background: #050801;
+    border-radius: 50px;
+    width: 20%;
+    padding: 12px 20px;
+    margin: 10px 10px;
+}
+
+form textarea{
+    color: #edf0f1;
+    border: #eff0f1 solid 2px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    font-family: "Montserrat";
+}
+
+form select{
+    color: #edf0f1;
+    border: #eff0f1 solid 2px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    font-family: "Montserrat";
+}
+
+form input[type=submit]{
+    font-family: "Montserrat";
+    font-size: larger;
+    color :rgba(214, 255, 64, 0.925);
+    padding:20px 25px;
+    margin: 10px 20px;
+    border: none;
+    background-color:#050801;
+    transition: 0.5s;
+}
+
+form input[type=submit]:hover{
+    background-color:rgba(214, 255, 64, 0.925);
+    color:#050801;
+    /*border: 4px solid rgba(214, 255, 64, 0.925);*/
+    box-shadow: 0 0 5px rgba(214, 255, 64, 0.925),
+        0 0 10px rgba(214, 255, 64, 0.925),
+        0 0 15px rgba(214, 255, 64, 0.925),
+        0 0 30px rgba(214, 255, 64, 0.925);
+}
+
+form input[type=reset]{
+    font-family: "Montserrat";
+    font-size: larger;
+    color :rgba(214, 255, 64, 0.925);
+    padding:20px 25px;
+    margin: 10px 20px;
+    border: none;
+    background-color:#050801;
+    transition: 0.5s;
+}
+
+form input[type=reset]:hover{
+    background-color:rgba(214, 255, 64, 0.925);
+    color:#050801;
+    /*border: 4px solid rgba(214, 255, 64, 0.925);*/
+    box-shadow: 0 0 5px rgba(214, 255, 64, 0.925),
+        0 0 10px rgba(214, 255, 64, 0.925),
+        0 0 15px rgba(214, 255, 64, 0.925),
+        0 0 30px rgba(214, 255, 64, 0.925);
+}
+
+/* about.php */
+
+table#about td{
+    color: #edf0f1;
+}
+
+/* friendadd.php */
+
+table#addfriend{
+    margin-bottom: 30px;
+}
+
+table#addfriend td{
+    color: #edf0f1;
+}
+
+table#addfriend a{
+    color: #edf0f1;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-size: larger;
+    color :rgba(72, 238, 50, 0.925);
+    border: 2px solid rgba(72, 238, 50, 0.925);
+    background-color:#050801;
+    transition: 0.5s;
+    padding: 15px 20px;
+}
+
+table#addfriend a:hover{
+    background-color:rgba(72, 238, 50, 0.925);
+    border: none;
+    color:#050801;
+    box-shadow: 0 0 5px rgba(72, 238, 50, 0.925),
+        0 0 10px rgba(72, 238, 50, 0.925),
+        0 0 15px rgba(72, 238, 50, 0.925),
+        0 0 30px rgba(72, 238, 50, 0.925);
+}
+
+table#pagination{
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+table#pagination a{
+    text-decoration: none;
+    color: rgba(214, 255, 64, 0.925);
+    transition: 0.5s;
+}
+
+table#pagination a:hover{
+    text-decoration: none;
+    color: #050801;
+    background-color: rgba(214, 255, 64, 0.925);
+    padding: 20px 30px;
+    transition: 0.5s;
+    box-shadow: 0 0 5px rgba(214, 255, 64, 0.925),
+        0 0 10px rgba(214, 255, 64, 0.925),
+        0 0 15px rgba(214, 255, 64, 0.925),
+        0 0 30px rgba(214, 255, 64, 0.925);
+}
+
+table#pagination td{
+    text-decoration: none;
+    color: rgba(214, 255, 64, 0.548);
+}
+
+/* friendlist.php */
+
+table#friendlist{
+    margin-bottom: 30px;
+    width: 1000px;
+}
+
+table#friendlist td{
+    color: #edf0f1;
+}
+
+table#friendlist td img{
+    width:70px;
+    margin: 10px;
+    transition: transform .2s;
+}
+
+table#friendlist td img:hover{
+    transform: scale(1.5);
+}
+
+table#friendlist a.unfriend{
+    color: #edf0f1;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-size: larger;
+    color :rgba(72, 238, 50, 0.925);
+    border: 2px solid rgba(72, 238, 50, 0.925);
+    background-color:#050801;
+    transition: 0.5s;
+    padding: 15px 20px;
+}
+
+table#friendlist a.unfriend:hover{
+    background-color:rgba(72, 238, 50, 0.925);
+    border: none;
+    color:#050801;
+    box-shadow: 0 0 5px rgba(72, 238, 50, 0.925),
+        0 0 10px rgba(72, 238, 50, 0.925),
+        0 0 15px rgba(72, 238, 50, 0.925),
+        0 0 30px rgba(72, 238, 50, 0.925);
+}
