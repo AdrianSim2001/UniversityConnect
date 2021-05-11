@@ -5,7 +5,7 @@ on:
   push:
     branches:
     - main
-    
+
 jobs:
   tag-new-versions:
     runs-on: ubuntu-latest
@@ -16,4 +16,4 @@ jobs:
       - uses: salsify/action-detect-and-tag-new-version@v2
         with:
           version-command: |
-            cat current-version.txt
+            cat index.php
