@@ -135,7 +135,7 @@
                 <tr>
                     <td><a href="index.php">Home</a></td>
                     <td><a href="login.php">Log-In</a></td>
-                    <td><a href="about.php">About this assignment</a></td>
+                    <td><a href="about.php">About</a></td>
                 </tr>
             </tbody>
         </table>
