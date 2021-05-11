@@ -19,5 +19,18 @@ jobs:
       - uses: salsify/action-detect-and-tag-new-version@v2
         with:
           version-command: |
+            cat about.php 
+            cat CreateDatabase.php
+            cat CreateTables.php
+            cat footer.php 
+            cat friendadd.php 
+            cat friendlist.php 
             cat index.php 
-            cat style.css
+            cat login.php 
+            cat logout.php 
+            cat navigation.php 
+            cat PopulateTable.php 
+            cat settings.php 
+            cat signup.php 
+            cat system_functions.php 
+            cat style/style.css
