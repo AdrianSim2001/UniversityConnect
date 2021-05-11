@@ -7,13 +7,13 @@ if (!isset($_SESSION['profile_name'])) {
     $profile_name = $_SESSION['profile_name'];
 }
 
-if (isset($_GET['friend_id'])&& isset($_GET['user_id']) && (!isset($_GET['rate']))) {
+if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (!isset($_GET['rate']))) {
     $unfriend_id = $_GET['friend_id'];
     $user_id = $_GET['user_id'];
     Unfriend($unfriend_id, $user_id);
 }
 
-if (isset($_GET['friend_id'])&& isset($_GET['user_id']) && (isset($_GET['rate']))) {
+if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']))) {
     $friend_id = $_GET['friend_id'];
     $user_id = $_GET['user_id'];
     $rating = $_GET['rate'];
@@ -160,8 +160,18 @@ if (isset($_GET['friend_id'])&& isset($_GET['user_id']) && (isset($_GET['rate'])
                     foreach ($user_friends as $key => $value) {
                             echo "<tr>";
                             echo "<td>" . $value[1] . "</td>";
-                            echo "<td><a class = 'unfriend' href='friendlist.php?friend_id=" . $value[0] . "&user_id=" . $user_id . "'>Unfriend</a></td>";
-                            echo "<td><a href='friendlist.php?rate=1&friend_id=" . $value[0] . "&user_id=" . $user_id . "'><img src = 'images/rating1.png' alt = 'rating1'></a><a href='friendlist.php?rate=2&friend_id=" . $value[0] . "&user_id=" . $user_id . "'><img src = 'images/rating2.png' alt = 'rating2'></a><a href='friendlist.php?rate=3&friend_id=" . $value[0] . "&user_id=" . $user_id . "'><img src = 'images/rating3.png' alt = 'rating3'></a><a href='friendlist.php?rate=4&friend_id=" . $value[0] . "&user_id=" . $user_id . "'><img src = 'images/rating4.png' alt = 'rating4'></a><a href='friendlist.php?rate=5&friend_id=" . $value[0] . "&user_id=" . $user_id . "'><img src = 'images/rating5.png' alt = 'rating5'></a></td>";
+                            echo "<td><a class = 'unfriend' href='friendlist.php?friend_id=" . $value[0] .
+                             "&user_id=" . $user_id . "'>Unfriend</a></td>";
+                            echo "<td><a href='friendlist.php?rate=1&friend_id=" . $value[0] . "&user_id=" .
+                             $user_id . "'><img src = 'images/rating1.png' alt = 'rating1'></a><a href='friendlist.php?rate=2&friend_id=" .
+                              $value[0] . "&user_id=" . $user_id .
+                               "'><img src = 'images/rating2.png' alt = 'rating2'></a><a href='friendlist.php?rate=3&friend_id=" .
+                               $value[0] . "&user_id=" . $user_id .
+                                "'><img src = 'images/rating3.png' alt = 'rating3'></a><a href='friendlist.php?rate=4&friend_id=" .
+                                $value[0] . "&user_id=" . $user_id .
+                                 "'><img src = 'images/rating4.png' alt = 'rating4'></a><a href='friendlist.php?rate=5&friend_id=" .
+                                 $value[0] . "&user_id=" . $user_id .
+                                  "'><img src = 'images/rating5.png' alt = 'rating5'></a></td>";
                             echo "</tr>";
                     }
                 }
@@ -171,8 +181,9 @@ if (isset($_GET['friend_id'])&& isset($_GET['user_id']) && (isset($_GET['rate'])
         <table id="navigation">
             <tbody>
                 <tr>
-                    <td><?php echo "<a class = 'navigate' href='friendadd.php?user_id=" . $user_id . "&num_of_friends=" . $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>" ?></td>
-                    <td><a class = "navigate" href="logout.php">Log out</a><span></span><span></span><span></span><span></span></td>
+                    <td><?php echo "<a class = 'navigate' href='friendadd.php?user_id=" . $user_id . "&num_of_friends=" .
+                     $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>" ?></td>
+                    <td><a class = "navigate" href="logout.php">Log out</a></td>
                 </tr>
             </tbody>
         </table>
