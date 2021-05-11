@@ -1,51 +1,18 @@
-name: Automerge
-
-# **What it does**: Pull requests with label "automerge" or "autosquash" will automatically merge.
-# **Why we have it**: While now this is a feature built into GitHub, we still use it as part of other automation.
-# **Who does it impact**: Any workflows that depend on automerge or autosquash labels.
-
-on:
-  pull_request:
-    types:
-      - labeled
-      - unlabeled
-      - synchronize
-      - opened
-      - edited
-      - ready_for_review
-      - reopened
-      - unlocked
-  pull_request_review:
-    types:
-      - submitted
-  check_suite:
-    types:
-      - completed
-  status: {}
-jobs:
-  dictionaries:
-    - en
-    - en_GB
-
-  # # Any files/folders we should ignore?
-  # excluded_files:
-  #   - "vendor/**/*"
-  #   - "node_modules/**/*"
-  #   - "*.key"
-  #   - "*.enc"
-  #   - "*.min.css"
-  #   - "*.css.map"
-  #   - "*.min.js"
-  #   - "*.js.map"
-  #   - "*.mk"
-  #   - "package-lock.json"
-  #   - "yarn.lock"
-  #   - "Gemfile.lock"
-  #   - ".typo-ci.yml"
-
-  # # Any typos we should ignore?
-  # excluded_words:
-  #   - typoci
-
-  # Would you like filenames to also be spellchecked?
-  spellcheck_filenames: true
+matrix:
+- name: Markdown
+  sources:
+  - '**/*.md'
+  default_encoding: utf-8
+  aspell:
+    lang: en
+  dictionary:
+    wordlists:
+    - wordlist.txt
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.markdown:
+  - pyspelling.filters.html:
+      comments: false
+      ignores:
+      - code
+      - pre
