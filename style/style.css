@@ -5,295 +5,295 @@ Last modified: 3 October 2020
 Description: Assignment 1
 */
 
-/*navigation style*/
+/* navigation style */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    background-color:#24252A;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
 }
 
-li,a, button{
+li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size:16px;
+    font-size: 16px;
     color: #edf0f1;
-    text-decoration:none;
+    text-decoration: none;
 }
 
-header{
-    display:flex;
+header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
 }
 
-#logo{
+#logo {
     cursor: pointer;
-    width:60px;
-    height:60px;
-    margin-right:auto;
+    width: 60px;
+    height: 60px;
+    margin-right: auto;
     border-radius: 150px;
 }
 
-nav ul{
-    list-style:none;
+nav ul {
+    list-style: none;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     padding: 0px 20px;
 }
 
-nav ul li a{
+nav ul li a {
     transition: all 0.3s ease 0s;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #0088a9;
 }
 
-button{
+button {
     padding: 9px 25px;
-    background-color:rgba(0,136,169,1);
+    background-color: rgba(0,136,169,1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
-button:hover{
-    background-color:rgba(0,136,169,0.8);
+button:hover {
+    background-color: rgba(0,136,169,0.8);
 }
 
 /*body style*/
 
-body h1,p,td,h2{
+body h1,p,td,h2 {
     font-family: "Montserrat", sans-serif;
 }
 
-body h1{
+body h1 {
     padding: 40px 40px;
     background-color: #edf0f1;
-    width:50%;
-    border:none;
+    width: 50%;
+    border: none;
     border-radius: 50px;
-    justify-content:center;
+    justify-content: center;
     margin: 0 auto;
-    text-align:center;
+    text-align: center;
 }
 
-body h2{
-     color:darkorange;
+body h2 {
+     color: darkorange;
      padding: 20px 20px;
      margin: 0 auto;
      margin-top: 100px;
-     margin-bottom:10px;
+     margin-bottom: 10px;
      border: darkorange solid 2px;
-     border-radius:50px;
-     width:20%;
-     text-align:center;
+     border-radius: 50px;
+     width: 20%;
+     text-align: center;
 }
 
-table{
+table {
     border: #edf0f1 solid 2px;
-    border-radius:50px;
-    padding:30px 30px;
-    margin:0 auto;
+    border-radius: 50px;
+    padding: 30px 30px;
+    margin: 0 auto;
     margin-top: 0px;
     margin-bottom: 100px;
     width: 70%;
 }
 
-table td{
-    color:#edf0f1;
+table td {
+    color: #edf0f1;
     padding: 20px 20px;
-    margin:0 auto;
-    text-align:left;
+    margin: 0 auto;
+    text-align: left;
 }
 
-#declaration{
-    color:#eff0f1;
-    justify-content:center;
+#declaration {
+    color: #eff0f1;
+    justify-content: center;
     width: 60%;
     margin: 40px auto;
-    text-align:center;
+    text-align: center;
     margin-bottom: 300px;
 }
 
-#declaration p{
-    background-color:darkred;
+#declaration p {
+    background-color: darkred;
     padding: 20px 20px;
     border-radius: 50px;
     border: #eff0f1 solid 2px;
 }
 
-#email a:hover{
+#email a:hover {
     color: #0088a9;
     transition: all 0.3s ease 0s;
 }
 
 /*footer style*/
 
-footer{
+footer {
     padding: 30px 5%;
     background-color: #edf0f1;
 }
 
-footer p#footer{
+footer p#footer {
     color: #24252a;
     background-color: #edf0f1;
-    text-align:center;
+    text-align: center;
     font-size: small;
 }
 
-footer table#footer{
+footer table#footer {
     margin-bottom: 30px;
     background-color: inherit;
 }
 
-footer a{
+footer a {
     color: rgba(46,49,49,0.8);
     background-color: #edf0f1;
 }
 
-footer a:hover{
+footer a:hover {
     color: rgba(46,49,49,1);
 }
 
-footer table ul li img{
+footer table ul li img {
     width: 40px;
     height: 40px;
     background-color: #edf0f1;
 }
 
-footer table ul li{
+footer table ul li {
     display: inline-block;
     background-color: #edf0f1;
     list-style: none;
 }
 
-footer table td ul{
+footer table td ul {
     background-color: #edf0f1;
 }
 
-footer table thead td{
+footer table thead td {
     color: #24252a;
     background-color: #edf0f1;
-    font-weight:bolder;
+    font-weight: bolder;
     padding: 10px 10px;
     margin: 10px 10px;
 }
 
-footer table tbody td{
+footer table tbody td {
     color: grey;
     background-color: #edf0f1;
     padding: 10px 10px;
     margin: 10px 10px;
 }
 
-footer a img{
-    background-color:#24252a;
+footer a img {
+    background-color: #24252a;
     padding: 2px;
     max-width: 15%;
-    height:auto;
-    clear:both;
-    border-radius:150px;
+    height: auto;
+    clear: both;
+    border-radius: 150px;
 }
 
 
 /*postjobform.php*/
 
-h3{
+h3 {
     font-family: "Montserrat";
-    color:#edf0f1;
+    color: #edf0f1;
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 10px auto;
-    border-radius:50px;
+    border-radius: 50px;
     background-color: darkorange;
-    border: solid 2px;
-    width:20%;
-    text-align:center;
+    border: 2px solid;
+    width: 20%;
+    text-align: center;
 }
 
-p.post_status{
+p.post_status {
     font-family: "Montserrat";
-    color:#edf0f1;
+    color: #edf0f1;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left:40px;
+    padding-left: 40px;
     margin: 10px auto;
-    text-align:center;
+    text-align: center;
     width: 100%;
 }
 
-p.form_failed{
+p.form_failed {
     font-family: "Montserrat";
-    color:red;
+    color: red;
 }
 
-h2#validate_success{
+h2#validate_success {
     font-family: "Montserrat";
-    color:lightgreen;
+    color: lightgreen;
     padding: 20px 20px;
     margin: 0 auto;
     margin-top: 100px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     border: lightgreen solid 2px;
-    border-radius:50px;
-    width:40%;
-    text-align:center;
+    border-radius: 50px;
+    width: 40%;
+    text-align: center;
 }
 
-h2#validate_failed{
+h2#validate_failed {
     font-family: "Montserrat";
-    color:red;
+    color: red;
     padding: 20px 20px;
     margin: 0 auto;
     margin-top: 100px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     border: red solid 2px;
-    border-radius:50px;
-    width:40%;
-    text-align:center;
+    border-radius: 50px;
+    width: 40%;
+    text-align: center;
 }
 
-form{
+form {
     border: #edf0f1 solid 5px;
     margin: 20px 30px;
     padding: 30px 30px;
     border-radius: 50px;
     font-family: "Montserrat";
-    color:#edf0f1;
+    color: #edf0f1;
     margin-bottom: 300px;
 }
 
-form p{
+form p {
     margin: 12px 10px;
-    color:#edf0f1;
+    color: #edf0f1;
 }
 
-form fieldset{
+form fieldset {
     border: #edf0f1 solid 5px;
     margin: 20px 30px;
     padding: 30px 30px;
     border-radius: 50px;
 }
 
-form legend{
+form legend {
     font-family: "Montserrat";
-    color:#edf0f1;
+    color: #edf0f1;
     padding: 20px 20px;
-    background-color:darkorange;
+    background-color: darkorange;
     border-radius: 50px;
     border: solid 2px #edf0f1;
 }
 
-form label{
+form label {
     font-family: "Montserrat";
     color: #edf0f1;
     padding-top: 10px;
@@ -302,7 +302,7 @@ form label{
     margin-bottom: 5px;
 }
 
-form input[type=text]{
+form input[type=text] {
     color: #edf0f1;
     border: #eff0f1 solid 2px;
     border-radius: 50px;
@@ -311,7 +311,7 @@ form input[type=text]{
     margin: 10px 10px;
 }
 
-form textarea{
+form textarea {
     color: #edf0f1;
     border: #eff0f1 solid 2px;
     border-radius: 20px;
@@ -320,7 +320,7 @@ form textarea{
     font-family: "Montserrat";
 }
 
-form select{
+form select {
     color: #edf0f1;
     border: #eff0f1 solid 2px;
     border-radius: 20px;
@@ -329,41 +329,41 @@ form select{
     font-family: "Montserrat";
 }
 
-form input[type=submit]{
+form input[type=submit] {
     font-family: "Montserrat";
     color: #edf0f1;
     border-radius: 50px;
     padding:20px 25px;
     margin: 10px 20px;
     border: none;
-    background-color:rgba(0,136,169,1);
+    background-color: rgba(0,136,169,1);
 }
 
-form input[type=submit]:hover{
-    background-color:rgba(0,136,169,0.7);
+form input[type=submit]:hover {
+    background-color: rgba(0,136,169,0.7);
 }
 
-form input[type=reset]{
+form input[type=reset] {
     font-family: "Montserrat";
     color: #edf0f1;
     border-radius: 50px;
-    padding:20px 25px;
+    padding: 20px 25px;
     margin: 10px 20px;
     border: none;
-    background-color:rgba(0,136,169,1);
+    background-color: rgba(0,136,169,1);
 }
 
-form input[type=reset]:hover{
-    background-color:rgba(0,136,169,0.7);
+form input[type=reset]:hover {
+    background-color: rgba(0,136,169,0.7);
 }
 
 
 /*searchjobprocess.php*/
 
-p.jobnotfound{
+p.jobnotfound {
     color: #edf0f1;
     background-color: red;
-    text-align:center;
+    text-align: center;
     margin: 30px auto;
     padding: 20px 20px;
     width: 30%;
@@ -373,28 +373,28 @@ p.jobnotfound{
 
 /*about.php*/
 
-table#version{
+table#version {
     margin: 20px auto;
 }
 
 /*managejob.php*/
 
-p.managejob{
+p.managejob {
     color: #edf0f1;
     padding: 10px 530px;
     width: 100%;
 }
 
-input.delete{
-    background-color:red;
+input.delete {
+    background-color: red;
     padding: 20px 25px;
-    color:#edf0f1;
+    color: #edf0f1;
     font-family: "Montserrat";
     border-radius: 50px;
     border: none;
 }
 
-input.delete:hover{
+input.delete:hover {
     transition: all 0.3s ease 0s;
     background-color: darkred;
 }
