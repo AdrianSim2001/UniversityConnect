@@ -1,3 +1,5 @@
+# referenced from https://github.com/TypoCI/spellcheck-action
+
 name: Typo-CI
 
 on:
