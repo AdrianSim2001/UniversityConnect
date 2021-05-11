@@ -1,4 +1,5 @@
 <div>
+<?php echo "
 <footer>
     <a class='footerAnchor' href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
     <table id = 'footer'>
@@ -24,7 +25,7 @@
                 </td>
             </tr>
             <tr>
-                <td><a class='footerAnchor' href='signup.php'>Sign Up</a></td>
+                <td><a class='footerAnchor href='signup.php'>Sign Up</a></td>
                 <td><a class='footerAnchor' href='about.php'>About</a></td>
             </tr>
         </tbody>
@@ -32,4 +33,5 @@
 
     <p id = 'footer'>&copy;2020 Greetings! All Rights Reserved</p>
 </footer>"
+?>
 </div>

@@ -1,4 +1,5 @@
 <div>
+<?php echo "
     <a href = 'index.php'><img src = 'images/companylogo.png' alt='icon' id = 'logo'></a></div>
     <nav>
         <ul>
@@ -26,5 +27,6 @@
     </nav>
     <a class = 'cta' href = 'managejob.php'>
         <button>Manage Jobs</button>
-    </a>
+    </a>"
+?>
 </div>
