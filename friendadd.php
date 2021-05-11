@@ -40,7 +40,6 @@ if (isset($_GET['user_id']) && isset($_GET['num_of_friends']) && isset($_SESSION
 }
 
 if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
-
     // to check for pagination purpose
     if (isset($_GET['pageno'])) {
         $pageno = $_GET['pageno'];
@@ -225,7 +224,6 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
             $friends_to_display = array();
 
         foreach($not_user_friends_pagination as $key => $value) {
-
                  // to search for mutual friends through myfriends table from database
 
                 $sql2 = "SELECT friend_id FROM myfriends WHERE user_id = '$user_id'";
@@ -236,8 +234,7 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
 
                 $mutual_friend_count = 0;
 
-            while($my_friends_row){
-
+            while ($my_friends_row) {
                     // start with selecting all friends of friend
                     $sql = "SELECT * FROM myfriends WHERE user_id = ?";
 
@@ -259,7 +256,6 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
                     $friend_friends_row = mysqli_fetch_row($queryResult);
 
                 while ($friend_friends_row) {
-
                     if ($friend_friends_row[1] == $my_friends_row[0]) {
                             $mutual_friend_count += 1;
                     }
@@ -286,12 +282,13 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
                 <?php
                 if (count($not_user_friends) == 0) {
                     echo "<p>There is no new friend at the moment. You have added all users as your friends!</p>";
-                }else{
+                } else {
                     foreach ($friends_to_display as $key => $value) {
                             echo "<tr>";
                             echo "<td>" . $value[3] . "</td>";
                             echo "<td> " . $value[count($value) - 1] . " mutual friend(s) </td>";
-                            echo "<td><a href='friendadd.php?pageno=" . $pageno . "&friend_id=" . $value[0] . "&user_id=" . $user_id . "'>Add as friend</a></td>";
+                            echo "<td><a href='friendadd.php?pageno=" . $pageno . "&friend_id=" . $value[0] . "&user_id=" .
+                             $user_id . "'>Add as friend</a></td>";
                             echo "</tr>";
                     }
                 }
@@ -302,7 +299,8 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
                 <?php
                     echo "<tr>
                     <td>
-                        <a href = 'friendadd.php?pageno=1&user_id=" . $user_id . "&num_of_friends=" . $num_of_friends . "'>First</a>
+                        <a href = 'friendadd.php?pageno=1&user_id=" . $user_id .
+                         "&num_of_friends=" . $num_of_friends . "'>First</a>
                     </td>";
                 if ($pageno <= 1) {
                     echo "
@@ -310,7 +308,8 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
                 } else {
                     echo "
                     <td>
-                        <a href = 'friendadd.php?pageno=" . ($pageno - 1) . "&user_id=" . $user_id . "&num_of_friends=" . $num_of_friends . "'>Previous</a>
+                        <a href = 'friendadd.php?pageno=" . ($pageno - 1) . "&user_id=" . $user_id .
+                         "&num_of_friends=" . $num_of_friends . "'>Previous</a>
                     </td>";
                 }
                 if ($pageno >= $last_page) {
@@ -319,12 +318,14 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
                 } else {
                     echo "
                     <td>
-                        <a href = 'friendadd.php?pageno=" . ($pageno + 1) . "&user_id=" . $user_id . "&num_of_friends=" . $num_of_friends . "'>Next</a>
+                        <a href = 'friendadd.php?pageno=" . ($pageno + 1) . "&user_id=" . $user_id .
+                         "&num_of_friends=" . $num_of_friends . "'>Next</a>
                     </td>";
                 }
                 echo"
                     <td>
-                        <a href = 'friendadd.php?pageno=" . $last_page . "&user_id=" . $user_id . "&num_of_friends=" . $num_of_friends . "'>Last</a>
+                        <a href = 'friendadd.php?pageno=" . $last_page . "&user_id=" . $user_id .
+                         "&num_of_friends=" . $num_of_friends . "'>Last</a>
                     </td>
                     </tr>";
                 ?>
