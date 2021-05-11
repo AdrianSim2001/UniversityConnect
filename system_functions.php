@@ -1,5 +1,5 @@
 <?php
-function bool populatetables_users($link, $user_email, $user_password, $user_profile, $date_created, $friends_num){
+function populatetables_users($link, $user_email, $user_password, $user_profile, $date_created, $friends_num){
     $success = true;
 
     for ($i=0; $i < 10; $i++) { 
