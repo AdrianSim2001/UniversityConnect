@@ -1,3 +1,4 @@
+<div>
 <?php
 include "settings.php";
 
@@ -5,7 +6,7 @@ include "settings.php";
 $conn = @mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 if (!$conn) {
-    die("<p>Connection failed: " . mysqli_connect_error()."</p>"); 
+    die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
 }
 
 // sql to create table
@@ -18,17 +19,18 @@ if (!$conn) {
         num_of_friends INT UNSIGNED
         )";
 
-    if(@mysqli_query($conn, $sql)){
-        $sql = "CREATE TABLE IF NOT EXISTS `myfriends`(
-            user_id INT NOT NULL,
-            friend_id INT NOT NULL   
+if (@mysqli_query($conn, $sql)) {
+    $sql = "CREATE TABLE IF NOT EXISTS `myfriends`(
+    user_id INT NOT NULL,
+    friend_id INT NOT NULL   
         )";
-        if(!@mysqli_query($conn, $sql)){
-            die("<p>Failed creating tables: ".mysqli_error($conn)."</p>");
-        }
-    }else{
-        die( "<p>Failed creating tables: ".mysqli_error($conn)."</p>");
+    if (!@mysqli_query($conn, $sql)) {
+        die("<p>Failed creating tables: " . mysqli_error($conn) . "</p>");
     }
+} else {
+        die( "<p>Failed creating tables: " . mysqli_error($conn) . "</p>");
+}
 
 @mysqli_close($conn);
 ?>
+</div>
