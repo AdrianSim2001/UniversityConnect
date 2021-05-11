@@ -160,13 +160,13 @@ footer table#footer {
   background-color: inherit;
 }
 
-footer a {
-  color: rgba(46,49,49,0.8);
+footer .footerAnchor {
+  color: rgba(46, 49, 49, 0.8);
   background-color: #edf0f1;
 }
 
-footer a:hover {
-  color: rgba(46,49,49,1);
+footer .footerAnchor:hover {
+  color: rgba(46, 49, 49, 1);
 }
 
 footer table ul li img {
@@ -213,7 +213,7 @@ footer a img {
 /*postjobform.php*/
 
 h3 {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #edf0f1;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -226,7 +226,7 @@ h3 {
 }
 
 p.post_status {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #edf0f1;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -237,12 +237,12 @@ p.post_status {
 }
 
 p.form_failed {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: red;
 }
 
 h2#validate_success {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: lightgreen;
   padding: 20px 20px;
   margin: 0 auto;
@@ -255,7 +255,7 @@ h2#validate_success {
 }
 
 h2#validate_failed {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: red;
   padding: 20px 20px;
   margin: 0 auto;
@@ -272,7 +272,7 @@ form {
   margin: 20px 30px;
   padding: 30px 30px;
   border-radius: 50px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #edf0f1;
   margin-bottom: 300px;
 }
@@ -290,7 +290,7 @@ form fieldset {
 }
 
 form legend {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #edf0f1;
   padding: 20px 20px;
   background-color: darkorange;
@@ -299,7 +299,7 @@ form legend {
 }
 
 form label {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #edf0f1;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -322,7 +322,7 @@ form textarea {
   border-radius: 20px;
   padding: 10px 20px;
   margin: 10px 10px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 
 form select {
@@ -331,35 +331,35 @@ form select {
   border-radius: 20px;
   padding: 10px 20px;
   margin: 10px 10px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 
 form input[type=submit] {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #edf0f1;
   border-radius: 50px;
   padding:20px 25px;
   margin: 10px 20px;
   border: none;
-  background-color: rgba(0,136,169,1);
+  background-color: rgba(0, 136, 169, 1);
 }
 
 form input[type=submit]:hover {
-  background-color: rgba(0,136,169,0.7);
+  background-color: rgba(0, 136, 169, 0.7);
 }
 
 form input[type=reset] {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #edf0f1;
   border-radius: 50px;
   padding: 20px 25px;
   margin: 10px 20px;
   border: none;
-  background-color: rgba(0,136,169,1);
+  background-color: rgba(0, 136, 169, 1);
 }
 
 form input[type=reset]:hover {
-  background-color: rgba(0,136,169,0.7);
+  background-color: rgba(0, 136, 169, 0.7);
 }
 
 
@@ -394,7 +394,7 @@ input.delete {
   background-color: red;
   padding: 20px 25px;
   color: #edf0f1;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   border-radius: 50px;
   border: none;
 }
