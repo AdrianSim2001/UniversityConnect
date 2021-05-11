@@ -37,13 +37,14 @@ if (!$conn) {
     $row = mysqli_num_rows($queryResult);
 
     if ($row <= 0) {
-        $result = populatetables_users($conn, $user_email_arr, $user_password_arr, $user_profile_arr, $date_created, $user_friends_num);
+        $result = populatetables_users($conn, $user_email_arr, $user_password_arr,
+         $user_profile_arr, $date_created, $user_friends_num);
 
         $result1 = populatetables_myfriends($conn, $myfriends_id);
 
-            if ($result1 && $result) {
-                echo "<p>Tables successfully created and populated</p>";
-            }
+        if ($result1 && $result) {
+            echo "<p>Tables successfully created and populated</p>";
+        }
     }
 
     @mysqli_close($conn);

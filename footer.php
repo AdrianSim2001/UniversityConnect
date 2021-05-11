@@ -1,3 +1,4 @@
+<div>
 <footer>
     <a class="footerAnchor" href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
     <table id = 'footer'>
@@ -31,3 +32,4 @@
 
     <p id = 'footer'>&copy;2020 Greetings! All Rights Reserved</p>
 </footer>
+</div>
