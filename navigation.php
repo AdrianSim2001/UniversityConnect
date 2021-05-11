@@ -1,6 +1,5 @@
-<?php
-    echo"
-    <div><a href = 'index.php'><img src = 'images/companylogo.png' alt='icon' id = 'logo'></a></div>
+<div>
+    <a href = 'index.php'><img src = 'images/companylogo.png' alt='icon' id = 'logo'></a></div>
     <nav>
         <ul>
             <li>
@@ -25,5 +24,7 @@
             </li>
         </ul>
     </nav>
-    <a class = 'cta' href = 'managejob.php'><button>Manage Jobs</button></a>";
-?>
+    <a class = 'cta' href = 'managejob.php'>
+        <button>Manage Jobs</button>
+    </a>
+</div>
