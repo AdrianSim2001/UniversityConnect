@@ -41,9 +41,9 @@ if (!$conn) {
 
         $result1 = populatetables_myfriends($conn, $myfriends_id);
 
-            if ($result1 && $result) {
-                echo "<p>Tables successfully created and populated</p>";
-            }
+        if ($result1 && $result) {
+            echo "<p>Tables successfully created and populated</p>";
+        }
     }
 
     @mysqli_close($conn);
