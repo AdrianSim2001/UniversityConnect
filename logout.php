@@ -1,6 +1,6 @@
 <div>
 <?php
-    session_start();
+session_start();
 if (isset($_SESSION['profile_name']) && isset($_SESSION['user_friends'])) {
         unset($_SESSION['profile_name']);
         unset($_SESSION['user_friends']);
@@ -8,7 +8,7 @@ if (isset($_SESSION['profile_name']) && isset($_SESSION['user_friends'])) {
         session_destroy();
         header('Location: index.php');
 }
-    header('Location: index.php');
-    session_destroy();
+header('Location: index.php');
+session_destroy();
 ?>
 </div>

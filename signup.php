@@ -37,9 +37,7 @@
                 $user_password = hash("sha256", $user_password);
                 $date = date("Y-m-d");
                 include "settings.php";
-                
                 $conn = @mysqli_connect($servername, $username, $password, $dbname);
-                
                 if (!$conn) {
                     die("<p>Connection failed: " . mysqli_connect_error() . "</p>"); 
                 }
@@ -59,7 +57,7 @@
                 if ($queryResult) {
                     header('Location: friendadd.php');
                 }
-            }else{
+            } else {
                 $formvalidate = false;
             }
         } else {
@@ -80,13 +78,14 @@
                 <legend>Sign Up</legend>
 
                 <label for="email">Email:</label>   </br>
-                <input type="email" name="email" id="email" placeholder="Enter your email" required = "required" <?php 
-                    if ($btnclicked) {
-                        if (!$formvalidate) {
-                            echo"value = " . $email_previous;
-                        }
+                <input type="email" name="email" id="email" placeholder="Enter your email" required = "required"
+                <?php
+                if ($btnclicked) {
+                    if (!$formvalidate) {
+                        echo"value = " . $email_previous;
                     }
-                ?> />  
+                }
+                ?>/>
                 <?php 
                 if ($btnclicked) {
                     if (!$emailOK) {
@@ -97,12 +96,13 @@
                 </br>
 
                 <label for="profile">Profile Name:</label>   </br>
-                <input type="text" name="profile" id="profile" placeholder="Enter your profile name" required = "required" <?php 
-                    if ($btnclicked) {
-                        if (!$formvalidate) {
-                            echo"value = " . $profile_previous;
-                        }
+                <input type="text" name="profile" id="profile" placeholder="Enter your profile name" required = "required"
+                <?php
+                if ($btnclicked) {
+                    if (!$formvalidate) {
+                        echo"value = " . $profile_previous;
                     }
+                }
                 ?> />  
                 <?php
                 if ($btnclicked) {
@@ -119,14 +119,14 @@
                 <label for="confirm_password">Confirm Password:</label> </br>
                 <input type="password" name="confirm_password" id="confirm_password" placeholder="confirm password" required = "required"/> 
                 <?php
-                    if ($btnclicked) {
-                        if (!$passwordOk) {
-                            echo"<p>" . $password_msg . "</p>";
-                        }
+                if ($btnclicked) {
+                    if (!$passwordOk) {
+                        echo"<p>" . $password_msg . "</p>";
                     }
-                ?> </br>
+                }
+                ?>
+                </br>
             </fieldset>
-
             <input type="submit" value="Register" name="register"/>
             <input type="reset" value="Clear"/>
         </form>
@@ -140,8 +140,7 @@
                 </tr>
             </tbody>
         </table>
-
-        
+                
         <?php include ("footer.php") ?>
     </body>
 
