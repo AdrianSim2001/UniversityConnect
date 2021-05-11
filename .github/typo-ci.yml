@@ -1,40 +1,18 @@
-# This is a sample .typo-ci.yml file, it's used to configure how Typo CI will behave.
-# Add it to the root of your project and push it to github.
----
+name: Typo-CI
 
-# What language dictionaries should it use? Currently Typo CI supports:
-# de
-# en
-# en_GB
-# es
-# fr
-# it
-# pt
-# pt_BR
-# tr
-dictionaries:
-  - en
-  - en_GB
-
-# Any files/folders we should ignore?
-excluded_files:
-  - "vendor/**/*"
-  - "node_modules/**/*"
-  - "*.key"
-  - "*.enc"
-  - "*.min.css"
-  - "*.css.map"
-  - "*.min.js"
-  - "*.js.map"
-  - "*.mk"
-  - "package-lock.json"
-  - "yarn.lock"
-  - "Gemfile.lock"
-  - ".typo-ci.yml"
-
-# Any typos we should ignore?
-excluded_words:
-  - typoci
-
-# Would you like filenames to also be spellchecked?
-spellcheck_filenames: true
+on:
+  push:
+    branches:
+    - main
+    
+jobs:
+  spellcheck:
+    name: Typo CI (GitHub Action)
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    steps:
+    - name: TypoCheck
+      uses: typoci/spellcheck-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
