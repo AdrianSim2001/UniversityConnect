@@ -20,4 +20,4 @@ jobs:
         with:
           version-command: |
             cat index.php 
-            cat style.css
+            cat style/style.css
