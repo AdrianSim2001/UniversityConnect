@@ -13,7 +13,7 @@
         <meta name="description" content="Assignment 2">
         <meta name="keywords" content="job, vacancy, posting, searching">
         <link rel="stylesheet" type="text/css" href="style/style.css">
-        <link rel="icon" href="images/icon.png">
+        <link rel="icon" href="images/companylogo.png">
     </head>
 
     <body>

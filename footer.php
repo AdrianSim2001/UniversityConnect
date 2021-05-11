@@ -1,6 +1,6 @@
 <?php
     echo"<footer>
-    <a href = 'index.php'><img src = 'images/icon.png' alt='icon'></a>
+    <a href = 'index.php'><img src = 'images/companylogo.png' alt='icon'></a>
     <table id = 'footer'>
         <thead>
             <tr>

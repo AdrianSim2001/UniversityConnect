@@ -1,6 +1,6 @@
 <?php
     echo"
-    <div><a href = 'index.php'><img src = 'images/icon.png' alt='icon' id = 'logo'></a></div>
+    <div><a href = 'index.php'><img src = 'images/companylogo.png' alt='icon' id = 'logo'></a></div>
     <nav>
         <ul>
             <li>
