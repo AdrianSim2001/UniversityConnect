@@ -25,7 +25,7 @@
                 </td>
             </tr>
             <tr>
-                <td><a class='footerAnchor' href='signup.php'>Sign Up</a></td>
+                <td><a class='footerAnchor href='signup.php'>Sign Up</a></td>
                 <td><a class='footerAnchor' href='about.php'>About</a></td>
             </tr>
         </tbody>

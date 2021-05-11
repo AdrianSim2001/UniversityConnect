@@ -23,10 +23,11 @@
             $btnclicked = false;
         if (!empty($_POST["login"])) {
             $btnclicked = true;
-            [$login_msg, $loginOk, $email_previous, $errorfield] = ChkEmailPasswordForLogin($_POST["email"], $_POST["login_password"]);
+            [$login_msg, $loginOk, $email_previous, $errorfield] =
+             ChkEmailPasswordForLogin($_POST["email"], $_POST["login_password"]);
 
             if ($loginOk) {
-                header('Location: friendlist.php');   
+                header('Location: friendlist.php');
             }
         } else {
             $btnclicked = false;
@@ -63,7 +64,8 @@
                 </br>
 
                 <label for="login_password">Password:</label> </br>
-                <input type="password" name="login_password" id="login_password" placeholder="password" required = "required"/> 
+                <input type="password" name="login_password" id="login_password" 
+                placeholder="password" required = "required"/> 
                 <?php
                 if ($btnclicked) {
                     if ($errorfield == "password") {
