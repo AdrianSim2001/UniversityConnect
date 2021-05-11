@@ -1,0 +1,15 @@
+name: 'A Code Spell Checker Action'
+description: 'Check code for typos & spelling mistakes, then displays suggestions.'
+author: 'Mike Rogers <me@mikerogers.io>'
+
+branding:
+  icon: 'code'
+  color: 'green'
+
+runs:
+  using: 'docker'
+  # image: 'Dockerfile'
+  image: 'docker://typoci/spellcheck-action'
+
+env:
+  GITHUB_TOKEN: secrets.GITHUB_TOKEN
