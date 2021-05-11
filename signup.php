@@ -19,8 +19,8 @@
     <body>
 
         <?php
-        include "system_functions.php";
-        include "settings.php";
+        require "system_functions.php";
+        require "settings.php";
 
         $btnclicked = false;
         if (!empty($_POST["register"])) {
