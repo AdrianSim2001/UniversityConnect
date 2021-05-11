@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
 <html lang="en">
-	<!-- Description: Assignment 2 -->
-	<!-- Author: Adrian Sim Huan Tze -->
-	<!-- Date: 24th October 2020 -->
-	<!-- Validated: 25th October 2020-->
-	
+    <!-- Description: Assignment 2 -->
+    <!-- Author: Adrian Sim Huan Tze -->
+    <!-- Date: 24th October 2020 -->
+    <!-- Validated: 25th October 2020-->
+
     <head>
         <title>MyFriend - Home</title>
         <meta charset="utf-8">
@@ -53,8 +53,8 @@
 
         <div id="declaration">
             <p>
-                I declare that this assignment is my individual work. I have not worked collaboratively nor have I copied from any other student's work
-                or from any other source.
+                I declare that this assignment is my individual work. I have not worked collaboratively nor have 
+                I copied from any other student's work or from any other source.
             </p>
         </div>
 
