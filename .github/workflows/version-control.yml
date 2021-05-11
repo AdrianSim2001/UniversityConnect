@@ -1,3 +1,5 @@
+# referenced from https://github.com/salsify/action-detect-and-tag-new-version/tree/v1.0.0
+
 name: Version-Control
 
 on: 
