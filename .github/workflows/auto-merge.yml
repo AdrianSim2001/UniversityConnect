@@ -1,42 +1,41 @@
 name: Automerge
 
+# **What it does**: Pull requests with label "automerge" or "autosquash" will automatically merge.
+# **Why we have it**: While now this is a feature built into GitHub, we still use it as part of other automation.
+# **Who does it impact**: Any workflows that depend on automerge or autosquash labels.
+
 on:
-  # Try enabling auto-merge for all open pull requests. (Only recommended for testing.)
-  push:
-
-  # Try enabling auto-merge for all open pull requests.
-  schedule:
-    - cron: 0 * * * *
-
-  # Try enabling auto-merge for a pull request when a draft is marked as “ready for review”, when
-  # a required label is applied or when a “do not merge” label is removed, or when a pull request
-  # is updated in any way (opened, synchronized, reopened, edited).
-  pull_request_target:
+  pull_request:
     types:
-      - opened
-      - synchronized
-      - reopened
-      - edited
       - labeled
       - unlabeled
+      - synchronize
+      - opened
+      - edited
       - ready_for_review
-
-  # Try enabling auto-merge for the specified pull request or all open pull requests if none is specified.
-  workflow_dispatch:
-    inputs:
-      pull-request:
-        description: Pull Request Number
-        required: false
-
+      - reopened
+      - unlocked
+  pull_request_review:
+    types:
+      - submitted
+  check_suite:
+    types:
+      - completed
+  status: {}
 jobs:
   automerge:
     runs-on: ubuntu-latest
+    if: (contains(github.event.pull_request.labels.*.name, 'automerge') || contains(github.event.pull_request.labels.*.name, 'autosquash')) && (github.repository == 'github/docs-internal' || github.repository == 'github/docs')
     steps:
-      - uses: reitermarkus/automerge@v2
-        with:
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
-          merge-method: rebase
-          do-not-merge-labels: never-merge
-          required-labels: automerge
-          pull-request: ${{ github.event.inputs.pull-request }}
-          dry-run: true
+      - name: automerge
+        uses: 'pascalgn/automerge-action@c9bd1823770819dc8fb8a5db2d11a3a95fbe9b07'
+        env:
+          GITHUB_TOKEN: '${{ secrets.OCTOMERGER_PAT_WITH_REPO_AND_WORKFLOW_SCOPE }}'
+          MERGE_METHOD_LABELS: 'automerge=merge,autosquash=squash'
+          MERGE_COMMIT_MESSAGE: 'pull-request-title'
+          MERGE_METHOD: 'merge'
+          MERGE_FORKS: 'true'
+          MERGE_RETRIES: '50'
+          MERGE_RETRY_SLEEP: '10000' # ten seconds
+          UPDATE_LABELS: 'automerge,autosquash'
+          UPDATE_METHOD: 'merge'
