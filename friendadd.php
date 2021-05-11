@@ -223,7 +223,7 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
 
             $friends_to_display = array();
 
-        foreach($not_user_friends_pagination as $key => $value) {
+        foreach ($not_user_friends_pagination as $key => $value) {
                  // to search for mutual friends through myfriends table from database
 
                 $sql2 = "SELECT friend_id FROM myfriends WHERE user_id = '$user_id'";
@@ -287,8 +287,8 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
                             echo "<tr>";
                             echo "<td>" . $value[3] . "</td>";
                             echo "<td> " . $value[count($value) - 1] . " mutual friend(s) </td>";
-                            echo "<td><a href='friendadd.php?pageno=" . $pageno . "&friend_id=" . $value[0] . "&user_id=" .
-                             $user_id . "'>Add as friend</a></td>";
+                            echo "<td><a href='friendadd.php?pageno=" . $pageno . "&friend_id=" .
+                             $value[0] . "&user_id=" . $user_id . "'>Add as friend</a></td>";
                             echo "</tr>";
                     }
                 }
