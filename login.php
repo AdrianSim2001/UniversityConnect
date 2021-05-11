@@ -83,7 +83,7 @@
                 <tr>
                     <td><a href="index.php">Home</a></td>
                     <td><a href="signup.php">Sign Up</a></td>
-                    <td><a href="about.php">About this assignment</a></td>
+                    <td><a href="about.php">About</a></td>
                 </tr>
             </tbody>
         </table>

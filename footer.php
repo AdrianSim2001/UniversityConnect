@@ -1,5 +1,5 @@
 <footer>
-    <a href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
+    <a class="footerAnchor" href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
     <table id = 'footer'>
         <thead>
             <tr>
@@ -24,10 +24,10 @@
             </tr>
             <tr>
                 <td><a class="footerAnchor" href='signup.php'>Sign Up</a></td>
-                <td><a class="footerAnchor" href='about.php'>About this assignment</a></td>
+                <td><a class="footerAnchor" href='about.php'>About</a></td>
             </tr>
         </tbody>
     </table>
 
     <p id = 'footer'>&copy;2020 Greetings! All Rights Reserved</p>
-</footer>";
+</footer>
