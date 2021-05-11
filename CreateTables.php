@@ -28,7 +28,7 @@ if (@mysqli_query($conn, $sql)) {
         die("<p>Failed creating tables: " . mysqli_error($conn) . "</p>");
     }
 } else {
-        die( "<p>Failed creating tables: " . mysqli_error($conn) . "</p>");
+        die("<p>Failed creating tables: " . mysqli_error($conn) . "</p>");
 }
 
 @mysqli_close($conn);
