@@ -31,6 +31,9 @@ excluded_files:
   - "yarn.lock"
   - "Gemfile.lock"
   - ".typo-ci.yml"
+  
+included_files:
+  - "index.php"
 
 # Any typos we should ignore?
 excluded_words:
