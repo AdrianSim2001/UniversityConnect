@@ -32,10 +32,13 @@
             $btnclicked = false;
         if (!empty($_POST["login"])) {
             $btnclicked = true;
-            [$login_msg, $loginOk, $email_previous, $errorfield] =
+            [$login_msg, $loginOk, $email_previous, $errorfield, $profile] =
              ChkEmailPasswordForLogin($_POST["email"], $_POST["login_password"]);
 
             if ($loginOk) {
+                session_start();
+                // Set session variables
+                $_SESSION['profile_name'] = $profile;
                 header('Location: friendlist.php');
             }
         } else {
