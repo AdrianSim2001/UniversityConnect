@@ -5,7 +5,7 @@
     <!-- Validated: OK 30th September 2020-->
 
     <head>
-        <title>MyFriend - Log In</title>
+        <title>UniversityConnect - Log In</title>
         <meta charset="utf-8">
         <meta name="author" content="Adrian Sim Huan Tze">
         <meta name="description" content="Assignment 2">
@@ -35,11 +35,11 @@
         ?>
 
         <h1>
-            My Friend System
+            University Connect
         </h1>
 
         <h2>
-            Log In Page
+            Log In
         </h2>
 
         <form method="post" action="login.php" novalidate = "novalidate">
@@ -84,7 +84,6 @@
             <tbody>
                 <tr>
                     <td><a href="index.php">Home</a></td>
-                    <td><a href="signup.php">Sign Up</a></td>
                     <td><a href="about.php">About</a></td>
                 </tr>
             </tbody>

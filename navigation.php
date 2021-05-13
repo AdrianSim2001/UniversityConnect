@@ -14,7 +14,7 @@
             </li>
             <li>
                 <a href='about.php'>
-                    About Assignment
+                    About
                 </a>
             </li>
             <li>
