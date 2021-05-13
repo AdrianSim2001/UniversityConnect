@@ -127,11 +127,11 @@ body h1 {
   padding: 20px 40px;
   background-color: #375296;
   color: white;
-  width: 70%;
+  width: 35%;
   border: none;
   border-radius: 50px;
   justify-content: center;
-  margin: 0 auto;
+  margin: 60px auto;
   text-align: center;
 }
 
@@ -273,20 +273,8 @@ footer .footerAnchor img {
   border-radius: 40px;
 }
 
-/* postjobform.php */
+/* login.php */
 
-h3 {
-  font-family: "Montserrat", sans-serif;
-  color: #edf0f1;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 10px auto;
-  border-radius: 50px;
-  background-color: darkorange;
-  border: 2px solid;
-  width: 20%;
-  text-align: center;
-}
 
 p.post_status {
   font-family: "Montserrat", sans-serif;
@@ -330,94 +318,110 @@ h2#validate_failed {
   text-align: center;
 }
 
+form p{
+  margin-top: 20px; 
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 20px;
+}
+
 form {
-  border: #edf0f1 solid 5px;
-  margin: 20px 10px;
-  padding: 30px 30px;
-  border-radius: 50px;
+  width: 60%;
+  border: #788cb4 solid 5px;
+  margin-left: 270px;
+  padding: 5px 5px;
+  border-radius: 30px;
   font-family: "Montserrat", sans-serif;
-  color: #edf0f1;
+  background-color: white;
+  color: #375296;
   margin-bottom: 300px;
+  padding-bottom: 30px;
+}
+
+form legend{
+  text-align: center;
+  width: 30%;
+  padding: 20px 10px;
+  margin-left: 60px;
+  text-decoration: none;
+  border-radius: 40px;
+  background-color: #e7ae3c;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
 }
 
 form fieldset {
-  border: #edf0f1 solid 5px;
+  border: #788cb4 solid 5px;
+  background-color: #788cb4;
   margin: 20px 30px;
   padding: 30px 30px;
-  border-radius: 50px;
-}
-
-form legend {
-  font-family: "Montserrat", sans-serif;
-  color: #edf0f1;
-  padding: 20px 20px;
-  background-color: darkorange;
-  border-radius: 50px;
-  border: solid 2px #edf0f1;
+  border-radius: 30px;
 }
 
 form label {
   font-family: "Montserrat", sans-serif;
-  color: #edf0f1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  color: white;
+  background-color: inherit;
+  font-size: 20px;
 }
 
-form input[type=text] {
-  color: #edf0f1;
-  border: #eff0f1 solid 2px;
-  border-radius: 50px;
-  width: 20%;
+form input[type=email] {
+  color: black;
+  font-size: 15px;
+  border: white solid 2px;
+  border-radius: 10px;
+  width: 80%;
   padding: 12px 20px;
   margin: 10px 10px;
 }
 
-form textarea {
-  color: #edf0f1;
-  border: #eff0f1 solid 2px;
-  border-radius: 20px;
-  padding: 10px 20px;
+form input[type=password] {
+  color: black;
+  font-size: 15px;
+  border: white solid 2px;
+  border-radius: 10px;
+  width: 80%;
+  padding: 12px 20px;
   margin: 10px 10px;
-  font-family: "Montserrat", sans-serif;
-}
-
-form select {
-  color: #edf0f1;
-  border: #eff0f1 solid 2px;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 10px 10px;
-  font-family: "Montserrat", sans-serif;
 }
 
 form input[type=submit] {
   font-family: "Montserrat", sans-serif;
-  color: #edf0f1;
+  font-size: 20px;
+  width: 20%;
   border-radius: 50px;
+  border: rgb(55,82,150) solid;
+  color: rgb(55,82,150);
   padding: 20px 25px;
   margin: 10px 20px;
-  border: none;
-  background-color: rgba(0, 136, 169, 1);
+  background-color: white;
 }
 
 form input[type=submit]:hover {
-  background-color: rgba(0, 136, 169, 0.7);
+  background-color: rgb(55,82,150);
+  border: white solid;
+  color: white;
+  transition: 0.7s;
 }
 
 form input[type=reset] {
   font-family: "Montserrat", sans-serif;
-  color: #edf0f1;
+  font-size: 20px;
+  color: red;
   border-radius: 50px;
   padding: 20px 25px;
   margin: 10px 20px;
-  border: none;
-  background-color: rgba(0, 136, 169, 1);
+  border: red solid;
+  width: 20%;
+  background-color: white;
 }
 
 form input[type=reset]:hover {
-  background-color: rgba(0, 136, 169, 0.7);
+  background-color: red;
+  border: white solid;
+  color:white;
 }
 
 /* searchjobprocess.php */

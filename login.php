@@ -38,10 +38,6 @@
             University Connect
         </h1>
 
-        <h2>
-            Log In
-        </h2>
-
         <form method="post" action="login.php" novalidate = "novalidate">
             <fieldset>
                 <legend>Log In</legend>
