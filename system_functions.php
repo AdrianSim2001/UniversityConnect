@@ -197,7 +197,6 @@
 
         $email = mysqli_escape_string($conn, $email);
         $login_password = mysqli_escape_string($conn, $login_password);
-        $login_password = hash('sha256', $login_password);
         $login_password = substr($login_password, 0, 20);
 
         // check if the input email already exists or not by getting them from the database
