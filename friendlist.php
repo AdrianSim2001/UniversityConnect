@@ -185,7 +185,8 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
         <table id="navigation">
             <tbody>
                 <tr>
-                    <td><?php echo "<a class = 'navigate' href='friendadd.php?user_id=" . $user_id . "&num_of_friends=" .
+                    <td><?php echo "<a class = 'navigate' href='friendadd.php?user_id=" .
+                     $user_id . "&num_of_friends=" .
                      $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>" ?></td>
                     <td><a class = "navigate" href="logout.php">Log out</a></td>
                 </tr>
