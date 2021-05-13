@@ -171,7 +171,9 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
                 <?php
                 if (count($user_friends) == 0) {
                         echo "<p class = 'friendlist'>You have not added any friends yet</p>";
-                        echo "<a href='friendadd.php' id ='addFriend'>Add a friend now</a>";
+                        echo "<a id = 'addFriend' href='friendadd.php?user_id=" .
+                                $user_id . "&num_of_friends=" .
+                                $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>";
                 } else {
                     foreach ($user_friends as $key => $value) {
                             echo "<tr>";
