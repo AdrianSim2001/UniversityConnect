@@ -54,8 +54,8 @@
             <fieldset>
                 <legend>Log In</legend>
 
-                <label for="email">Email:</label>   </br>
-                <input type="email" name="email" id="email" placeholder="Enter your email" required = "required" <?php
+                <label for="email">Student Email:</label>   </br>
+                <input type="email" name="email" id="email" placeholder="Enter your student email" required = "required" <?php
                 if ($btnclicked) {
                     if (!$loginOk) {
                         echo"value = '" . $email_previous . "'";

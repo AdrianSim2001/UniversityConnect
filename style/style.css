@@ -502,3 +502,9 @@ table#version {
   padding: 10px;
   border-radius: 20px;
 }
+
+#addfriendTable a:hover{
+  background-color: white;
+  color:#e7ae3c;
+  transition: 0.8s;
+}
