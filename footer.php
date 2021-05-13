@@ -13,7 +13,7 @@
         <tbody>
             <tr>
                 <td><a class='footerAnchor' href='login.php'>Log In</a></td>
-                <td><a class='footerAnchor' href = 'index.php'>Home</a></td>
+                <td><a class='footerAnchor' href='about.php'>About</a></td>
                 <td>
                     <ul>
                         <li><img src = 'images/facebook.png' alt='icon'></li>
@@ -25,8 +25,7 @@
                 </td>
             </tr>
             <tr>
-                <td><a class='footerAnchor href='signup.php'>Sign Up</a></td>
-                <td><a class='footerAnchor' href='about.php'>About</a></td>
+                <td><a class='footerAnchor' href = 'index.php'>Home</a></td>
             </tr>
         </tbody>
     </table>

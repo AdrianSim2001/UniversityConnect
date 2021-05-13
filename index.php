@@ -7,7 +7,7 @@
     <!-- Validated: 25th October 2020-->
 
     <head>
-        <title>MyFriend - Home</title>
+        <title>UniversityConnect - Home</title>
         <meta charset="utf-8">
         <meta name="author" content="Adrian Sim Huan Tze">
         <meta name="description" content="Assignment 2">
@@ -16,63 +16,38 @@
         <link rel="icon" href="images/companylogo.png">
     </head>
 
-    <body>
+    <header>
 
+        <a class='footerAnchor' href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
         <h1>
-            My Friend System
+            University Connect
         </h1>
 
-        <h2>Assignment Home Page</h2>
+    </header>
 
-        <table>
-                <tr>
-                    <td>
-                        Name:
-                    </td>
-                    <td>
-                        Adrian Sim Huan Tze
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Student ID:
-                    </td>
-                    <td>
-                        101225244
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Email:
-                    </td>
-                    <td id="email">
-                        <a href="mailto: 101225244@students.swinburne.edu.my">101225244@students.swinburne.edu.my</a>
-                    </td>
-                </tr>
-        </table>
+    <body>
+        <div class="content">
+            <div class="text">
+                <h2>Join us to widen your friend cycle</h2>
+                <p>
+                    Improve relationship between university students by enhancing communication
+                    so that they can expand their social circle
+                </p>
+            </div>
 
-        <div id="declaration">
-            <p>
-                I declare that this assignment is my individual work. I have not worked collaboratively
-                 nor have I copied from any other student's work or from any other source.
-            </p>
+            <div class="action">
+                <img src = 'images/companylogo.png' alt='icon'>
+                <a href="login.php" class="learnMore">Log In</a>
+                <a href="about.php" class="learnMore">Learn More</a>
+            </div>
         </div>
+
 
         <?php
             include_once "CreateDatabase.php";
             include "CreateTables.php";
             include_once "PopulateTable.php";
         ?>
-
-        <table>
-            <tbody>
-                <tr>
-                    <td><a href="signup.php">Sign-Up</a></td>
-                    <td><a href="login.php">Log-In</a></td>
-                    <td><a href="about.php">About</a></td>
-                </tr>
-            </tbody>
-        </table>
 
         
         <?php include 'footer.php' ?>

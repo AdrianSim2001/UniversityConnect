@@ -13,7 +13,7 @@ Description: Assignment 1
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #24252a;
+  background-color: #fffaf0;
 }
 
 li,
@@ -22,7 +22,7 @@ button {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #edf0f1;
+  color: #375296;
   text-decoration: none;
 }
 
@@ -71,6 +71,30 @@ button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
 
+/* Header Style */
+header h1 {
+  padding: 40px 40px;
+  background-color: #375296;
+  color: white;
+  width: 50%;
+  border: none;
+  border-radius: 50px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header img{
+  marker-start: 0px;
+  max-width: 50%;
+  height: auto;
+  border: none;
+}
+
+header{
+  width: 80%;
+}
+
 /* Body style */
 
 body h1,
@@ -80,10 +104,30 @@ h2 {
   font-family: "Montserrat", sans-serif;
 }
 
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  margin-bottom: 200px;
+}
+
+.content .text{
+    position: relative;
+    width: 60%;
+}
+
+.content .action{
+    width: 40%;
+    margin-top: 20px;
+}
+
 body h1 {
-  padding: 40px 40px;
-  background-color: #edf0f1;
-  width: 50%;
+  padding: 20px 40px;
+  background-color: #375296;
+  color: white;
+  width: 70%;
   border: none;
   border-radius: 50px;
   justify-content: center;
@@ -92,15 +136,52 @@ body h1 {
 }
 
 body h2 {
-  color: darkorange;
+  color: black;
   padding: 20px 20px;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin-left: 100px;
+  margin-top: 50px;
   margin-bottom: 10px;
-  border: darkorange solid 2px;
-  border-radius: 50px;
-  width: 20%;
+  width: 80%;
+  font-size: 60px;
+  text-align: left;
+}
+
+body p {
+  color: black;
+  padding: 20px 20px;
+  margin-left: 100px;
+  margin-bottom: 10px;
+  width: 60%;
+  line-height: 35px; 
+  font-size: 20px;
+  text-align: left;
+}
+
+.action img{
+  margin-left: 80px;
+}
+
+.learnMore{
+  display: inherit;
   text-align: center;
+  width: 60%;
+  margin: 20px 30px;
+  padding:20px 70px;
+  margin-left: 60px;
+  text-decoration: none;
+  border-radius: 40px;
+  background-color: #e7ae3c;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  opacity: 0.9;
+}
+
+.learnMore:hover {
+  opacity: 1;
+  background-color: #788cb4;
+  transition: 0.6s;
 }
 
 table {
@@ -120,49 +201,28 @@ table td {
   text-align: left;
 }
 
-#declaration {
-  color: #eff0f1;
-  justify-content: center;
-  width: 60%;
-  margin: 40px auto;
-  text-align: center;
-  margin-bottom: 300px;
-}
-
-#declaration p {
-  background-color: darkred;
-  padding: 20px 20px;
-  border-radius: 50px;
-  border: #eff0f1 solid 2px;
-}
-
-#email a:hover {
-  color: #0088a9;
-  transition: all 0.3s ease 0s;
-}
-
 /* Footer style */
 
 footer {
   padding: 30px 5%;
-  background-color: #edf0f1;
+  background-color: #375296;
 }
 
 footer p#footer {
-  color: #24252a;
-  background-color: #edf0f1;
+  color: white;
+  background-color: #375296;
   text-align: center;
   font-size: small;
 }
 
 footer table#footer {
   margin-bottom: 30px;
-  background-color: inherit;
+  background-color: #375296;
 }
 
 footer .footerAnchor {
   color: rgba(46, 49, 49, 0.8);
-  background-color: #edf0f1;
+  background-color: #375296;
 }
 
 footer .footerAnchor:hover {
@@ -172,41 +232,45 @@ footer .footerAnchor:hover {
 footer table ul li img {
   width: 40px;
   height: 40px;
-  background-color: #edf0f1;
+  background-color: #375296;
 }
 
 footer table ul li {
   display: inline-block;
-  background-color: #edf0f1;
+  background-color: #375296;
   list-style: none;
 }
 
 footer table td ul {
-  background-color: #edf0f1;
+  background-color: #375296;
 }
 
 footer table thead td {
-  color: #24252a;
-  background-color: #edf0f1;
+  color: white;
+  background-color: #375296;
   font-weight: bolder;
   padding: 10px 10px;
   margin: 10px 10px;
 }
 
 footer table tbody td {
-  color: grey;
-  background-color: #edf0f1;
+  color: white;
+  background-color: #375296;
   padding: 10px 10px;
   margin: 10px 10px;
 }
 
+footer .footerAnchor{
+  color: white;
+}
+
 footer .footerAnchor img {
-  background-color: #24252a;
+  background-color: #375296;
   padding: 2px;
   max-width: 15%;
   height: auto;
   clear: both;
-  border-radius: 150px;
+  border-radius: 40px;
 }
 
 /* postjobform.php */

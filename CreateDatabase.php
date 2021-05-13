@@ -15,8 +15,6 @@ if (!$conn) {
     die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
 }
 
-echo "<p>Connected database server successfully</p>";
-
 $sql = "CREATE DATABASE `101225244`";
 
 if (@mysqli_query($conn, $sql)) {
