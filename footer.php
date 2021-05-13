@@ -26,6 +26,7 @@
             </tr>
             <tr>
                 <td><a class='footerAnchor' href = 'index.php'>Home</a></td>
+                <td><a class='footerAnchor' href = 'mailto:universityconnect@gmail.com'>Contact Us</a></td>
             </tr>
         </tbody>
     </table>
