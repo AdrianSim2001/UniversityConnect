@@ -31,6 +31,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px 100px;
 }
 
 #logo {
@@ -58,7 +63,7 @@ nav ul li a:hover {
   color: #0088a9;
 }
 
-button {
+button{
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border: none;
@@ -67,22 +72,11 @@ button {
   transition: all 0.3s ease 0s;
 }
 
-button:hover {
+button:hover{
   background-color: rgba(0, 136, 169, 0.8);
 }
 
 /* Header Style */
-
-header{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0px 100px;
-  display: flex;
-  justify-content: space-between;
-}
-
 
 header img{
   margin-right:500px;
