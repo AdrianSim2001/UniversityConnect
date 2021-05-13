@@ -30,12 +30,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0px 100px;
+  padding: 0 100px;
 }
 
 #logo {
@@ -63,7 +63,7 @@ nav ul li a:hover {
   color: #0088a9;
 }
 
-button{
+button {
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border: none;
@@ -72,18 +72,18 @@ button{
   transition: all 0.3s ease 0s;
 }
 
-button:hover{
+button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
 
 /* Header Style */
 
-header img{
-  margin-right:500px;
+header img {
+  margin-right: 500px;
   max-width: 100px;
 }
 
-header a:hover{
+header a:hover {
   transition: 0.7s;
   color: black;
   scale: 1.2;
@@ -99,23 +99,23 @@ h2 {
   font-family: "Montserrat", sans-serif;
 }
 
-.content{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 200px;
 }
 
-.content .text{
-    position: relative;
-    width: 60%;
+.content .text {
+  position: relative;
+  width: 60%;
 }
 
-.content .action{
-    width: 40%;
-    margin-top: 20px;
+.content .action {
+  width: 40%;
+  margin-top: 20px;
 }
 
 body h1 {
@@ -147,21 +147,21 @@ body p {
   margin-left: 100px;
   margin-bottom: 10px;
   width: 60%;
-  line-height: 35px; 
+  line-height: 35px;
   font-size: 20px;
   text-align: left;
 }
 
-.action img{
+.action img {
   margin-left: 80px;
 }
 
-.learnMore{
+.learnMore {
   display: inherit;
   text-align: center;
   width: 60%;
   margin: 20px 30px;
-  padding:20px 70px;
+  padding: 20px 70px;
   margin-left: 60px;
   text-decoration: none;
   border-radius: 40px;
@@ -238,7 +238,7 @@ footer table tbody td {
   margin: 10px 10px;
 }
 
-footer .footerAnchor{
+footer .footerAnchor {
   color: white;
 }
 
@@ -296,8 +296,8 @@ h2#validate_failed {
   text-align: center;
 }
 
-form p{
-  margin-top: 20px; 
+form p {
+  margin-top: 20px;
   text-align: center;
   padding: 10px 0;
   border-radius: 20px;
@@ -316,7 +316,7 @@ form {
   padding-bottom: 30px;
 }
 
-form legend{
+form legend {
   text-align: center;
   width: 30%;
   padding: 20px 10px;
@@ -370,15 +370,15 @@ form input[type=submit] {
   font-size: 20px;
   width: 20%;
   border-radius: 50px;
-  border: rgb(55,82,150) solid;
-  color: rgb(55,82,150);
+  border: rgb(55, 82, 150) solid;
+  color: rgb(55, 82, 150);
   padding: 20px 25px;
   margin: 10px 20px;
   background-color: white;
 }
 
 form input[type=submit]:hover {
-  background-color: rgb(55,82,150);
+  background-color: rgb(55, 82, 150);
   border: white solid;
   color: white;
   transition: 0.7s;
@@ -399,12 +399,12 @@ form input[type=reset] {
 form input[type=reset]:hover {
   background-color: red;
   border: white solid;
-  color:white;
+  color: white;
 }
 
 /* friendlist.php */
 
-#addFriend{
+#addFriend {
   text-align: center;
   width: 25%;
   margin-left: 120px;
@@ -419,13 +419,13 @@ form input[type=reset]:hover {
   opacity: 0.9;
 }
 
-#addFriend:hover{
+#addFriend:hover {
   transition: 0.7s;
   opacity: 1;
   background-color: #375296;
 }
 
-.friendlist{
+.friendlist {
   margin-bottom: 20px;
   padding-bottom: 10px;
 }
@@ -439,23 +439,23 @@ table {
   width: 70%;
 }
 
-#friendlist{
-   margin: 100px auto;
+#friendlist {
+  margin: 100px auto;
 }
 
-#friendlist .unfriend{
+#friendlist .unfriend {
   background-color: #e7ae3c;
-  color:#fffaf0;
+  color: #fffaf0;
   padding: 15px;
-  border-radius: 20px;;
+  border-radius: 20px;
 }
 
-#friendlist .unfriend:hover{
+#friendlist .unfriend:hover {
   background-color: red;
   transition: 0.7s;
 }
 
-#friendlist img{
+#friendlist img {
   width: 70px;
 }
 
@@ -474,7 +474,7 @@ table#version {
 
 /* friendadd.php */
 
-#addfriendTable{
+#addfriendTable {
   width: 80%;
   margin: 30px auto;
   padding: 10px 30px;
@@ -482,23 +482,23 @@ table#version {
   border-collapse: collapse;
 }
 
-#addfriendTable tr td{
+#addfriendTable tr td {
   background-color: #8191bc;
   margin-bottom: 20px;
   border-bottom: #fffaf0 solid 15px;
   border-radius: 11px;
-  color:#fffaf0;
+  color: #fffaf0;
 }
 
-#addfriendTable a{
+#addfriendTable a {
   background-color: #e7ae3c;
-  color:#fffaf0;
+  color: #fffaf0;
   padding: 10px;
   border-radius: 20px;
 }
 
-#addfriendTable a:hover{
+#addfriendTable a:hover {
   background-color: white;
-  color:#e7ae3c;
+  color: #e7ae3c;
   transition: 0.8s;
 }
