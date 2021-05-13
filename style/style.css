@@ -30,7 +30,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -59,10 +58,6 @@ nav ul li a {
   transition: all 0.3s ease 0s;
 }
 
-nav ul li a:hover {
-  color: #0088a9;
-}
-
 button {
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
@@ -89,6 +84,9 @@ header a:hover {
   scale: 1.2;
 }
 
+nav ul li a:hover {
+  color: #0088a9;
+}
 
 /* Body style */
 
@@ -179,80 +177,7 @@ body p {
   transition: 0.6s;
 }
 
-/* Footer style */
-
-footer {
-  padding: 30px 5%;
-  background-color: #375296;
-}
-
-footer p#footer {
-  color: white;
-  background-color: #375296;
-  text-align: center;
-  font-size: small;
-}
-
-footer table#footer {
-  margin-bottom: 30px;
-  background-color: #375296;
-}
-
-footer .footerAnchor {
-  color: rgba(46, 49, 49, 0.8);
-  background-color: #375296;
-}
-
-footer .footerAnchor:hover {
-  color: rgba(46, 49, 49, 1);
-}
-
-footer table ul li img {
-  width: 40px;
-  height: 40px;
-  background-color: #375296;
-}
-
-footer table ul li {
-  display: inline-block;
-  background-color: #375296;
-  list-style: none;
-}
-
-footer table td ul {
-  background-color: #375296;
-}
-
-footer table thead td {
-  color: white;
-  background-color: #375296;
-  font-weight: bolder;
-  padding: 10px 10px;
-  margin: 10px 10px;
-}
-
-footer table tbody td {
-  color: white;
-  background-color: #375296;
-  padding: 10px 10px;
-  margin: 10px 10px;
-}
-
-footer .footerAnchor {
-  color: white;
-}
-
-footer .footerAnchor img {
-  background-color: #375296;
-  padding: 2px;
-  max-width: 15%;
-  height: auto;
-  clear: both;
-  border-radius: 40px;
-}
-
 /* login.php */
-
 
 p.post_status {
   font-family: "Montserrat", sans-serif;
@@ -501,4 +426,76 @@ table#version {
   background-color: white;
   color: #e7ae3c;
   transition: 0.8s;
+}
+
+/* Footer style */
+
+footer {
+  padding: 30px 5%;
+  background-color: #375296;
+}
+
+footer p#footer {
+  color: white;
+  background-color: #375296;
+  text-align: center;
+  font-size: small;
+}
+
+footer table#footer {
+  margin-bottom: 30px;
+  background-color: #375296;
+}
+
+footer .footerAnchor {
+  color: rgba(46, 49, 49, 0.8);
+  background-color: #375296;
+}
+
+footer .footerAnchor:hover {
+  color: rgba(46, 49, 49, 1);
+}
+
+footer table ul li img {
+  width: 40px;
+  height: 40px;
+  background-color: #375296;
+}
+
+footer table ul li {
+  display: inline-block;
+  background-color: #375296;
+  list-style: none;
+}
+
+footer table td ul {
+  background-color: #375296;
+}
+
+footer table thead td {
+  color: white;
+  background-color: #375296;
+  font-weight: bolder;
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+footer table tbody td {
+  color: white;
+  background-color: #375296;
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+footer .footerAnchor {
+  color: white;
+}
+
+footer .footerAnchor img {
+  background-color: #375296;
+  padding: 2px;
+  max-width: 15%;
+  height: auto;
+  clear: both;
+  border-radius: 40px;
 }

@@ -145,16 +145,16 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
             // Create connection
             $conn = @mysqli_connect($servername, $username, $password, $dbname);
             // Check connection
-        if (!$conn) {
-            die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
-        }
+if (!$conn) {
+    die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
+}
 
             // change default database to '101225244' database
             $dbSelect = @mysqli_select_db($conn, 101225244);
 
-        if (!$dbSelect) {
-            die("<p>The database is not available.</p>");
-        }
+if (!$dbSelect) {
+    die("<p>The database is not available.</p>");
+}
 
             $sql = "SELECT * FROM users WHERE profile_name != ?";
 
@@ -177,18 +177,18 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
 
             $not_user_friends = array();
 
-        while ($row) {
-            array_push($not_user_friends, $row);
-            $row = mysqli_fetch_row($queryResult);
-        }
+while ($row) {
+    array_push($not_user_friends, $row);
+    $row = mysqli_fetch_row($queryResult);
+}
 
-        foreach ($not_user_friends as $key => $value) {
-            foreach ($user_friends as $key1 => $value1) {
-                if (in_array($value[0], $value1)) {
-                    unset($not_user_friends[$key]);
-                }
-            }
+foreach ($not_user_friends as $key => $value) {
+    foreach ($user_friends as $key1 => $value1) {
+        if (in_array($value[0], $value1)) {
+            unset($not_user_friends[$key]);
         }
+    }
+}
 
             $last_page = ceil(count($not_user_friends) / $no_of_records_per_page);
 
@@ -197,58 +197,58 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id'])) {
 
             $friends_to_display = array();
 
-        foreach ($not_user_friends_pagination as $key => $value) {
-                 // to search for mutual friends through myfriends table from database
+foreach ($not_user_friends_pagination as $key => $value) {
+    // to search for mutual friends through myfriends table from database
 
-                $sql2 = "SELECT friend_id FROM myfriends WHERE user_id = '$user_id'";
+    $sql2 = "SELECT friend_id FROM myfriends WHERE user_id = '$user_id'";
 
-                $queryResult2 = @mysqli_query($conn, $sql2) or die("<p>Unable to select from database table</p>");
+    $queryResult2 = @mysqli_query($conn, $sql2) or die("<p>Unable to select from database table</p>");
 
-                $my_friends_row = mysqli_fetch_row($queryResult2);
+    $my_friends_row = mysqli_fetch_row($queryResult2);
 
-                $mutual_friend_count = 0;
+    $mutual_friend_count = 0;
 
-            while ($my_friends_row) {
-                    // start with selecting all friends of friend
-                    $sql = "SELECT * FROM myfriends WHERE user_id = ?";
+    while ($my_friends_row) {
+        // start with selecting all friends of friend
+        $sql = "SELECT * FROM myfriends WHERE user_id = ?";
 
-                    $prepared_stmt = mysqli_prepare($conn, $sql);
+        $prepared_stmt = mysqli_prepare($conn, $sql);
 
-                    //Bind input variables to prepared statement
-                    mysqli_stmt_bind_param($prepared_stmt, 's', $value[0]);
+        //Bind input variables to prepared statement
+        mysqli_stmt_bind_param($prepared_stmt, 's', $value[0]);
 
-                    //Execute prepared statement
-                    mysqli_stmt_execute($prepared_stmt);
+        //Execute prepared statement
+        mysqli_stmt_execute($prepared_stmt);
 
-                    // Get resultset
-                    $queryResult =  mysqli_stmt_get_result($prepared_stmt)
-                        or die("<p>Unable to select from database table</p>");
+        // Get resultset
+        $queryResult =  mysqli_stmt_get_result($prepared_stmt)
+        or die("<p>Unable to select from database table</p>");
 
-                    // Close the prepared statement
-                    @mysqli_stmt_close($prepared_stmt);
+        // Close the prepared statement
+        @mysqli_stmt_close($prepared_stmt);
 
-                    $friend_friends_row = mysqli_fetch_row($queryResult);
+        $friend_friends_row = mysqli_fetch_row($queryResult);
 
-                while ($friend_friends_row) {
-                    if ($friend_friends_row[1] == $my_friends_row[0]) {
-                            $mutual_friend_count += 1;
-                    }
-                        $friend_friends_row = mysqli_fetch_row($queryResult);
-                }
-                    $my_friends_row = mysqli_fetch_row($queryResult2);
+        while ($friend_friends_row) {
+            if ($friend_friends_row[1] == $my_friends_row[0]) {
+                $mutual_friend_count += 1;
             }
-
-                array_push($value, $mutual_friend_count);
-
-                array_push($friends_to_display, $value);
+            $friend_friends_row = mysqli_fetch_row($queryResult);
         }
+        $my_friends_row = mysqli_fetch_row($queryResult2);
+    }
 
-            $_SESSION['user_friends2'] = $user_friends;
+    array_push($value, $mutual_friend_count);
 
-            echo"<p></p>";
+    array_push($friends_to_display, $value);
+}
 
-            @mysqli_close($conn);
-        ?>
+    $_SESSION['user_friends2'] = $user_friends;
+
+    echo"<p></p>";
+
+    @mysqli_close($conn);
+?>
 
 <!DOCTYPE html>
 
