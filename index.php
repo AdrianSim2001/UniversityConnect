@@ -9,7 +9,7 @@
     <head>
         <title>MyFriend - Home</title>
         <meta charset="utf-8">
-        <meta name="author" content="Adrian Sim Huan Tze">	
+        <meta name="author" content="Adrian Sim Huan Tze">
         <meta name="description" content="Assignment 2">
         <meta name="keywords" content="job, vacancy, posting">
         <link rel="stylesheet" type="text/css" href="style/style.css">
