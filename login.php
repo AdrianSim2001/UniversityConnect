@@ -14,6 +14,15 @@
         <link rel="icon" href="images/companylogo.png">
     </head>
 
+    <header>
+
+        <a class='footerAnchor' href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
+        <td><a href="index.php">Home</a></td>
+        <td><a href="about.php">About</a></td>
+        <td><a href="login.php">Log In</a></td>
+
+    </header>
+
     <body>
 
         <?php
@@ -75,15 +84,6 @@
             <input type="submit" value="Log In" name="login"/>
             <input type="reset" value="Clear"/>
         </form>
-
-        <table>
-            <tbody>
-                <tr>
-                    <td><a href="index.php">Home</a></td>
-                    <td><a href="about.php">About</a></td>
-                </tr>
-            </tbody>
-        </table>
 
         
         <?php include "footer.php" ?>

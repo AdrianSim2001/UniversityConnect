@@ -19,13 +19,16 @@
     <header>
 
         <a class='footerAnchor' href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
-        <h1>
-            University Connect
-        </h1>
+        <td><a href="index.php">Home</a></td>
+        <td><a href="about.php">About</a></td>
+        <td><a href="login.php">Log In</a></td>
 
     </header>
 
     <body>
+        <h1>
+            University Connect
+        </h1>
         <div class="content">
             <div class="text">
                 <h2>Join us to widen your friend cycle</h2>
