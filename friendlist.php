@@ -21,33 +21,7 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
 }
 ?>
 
-<!DOCTYPE html>
-
-<html lang="en">
-    <!-- Description: Assignment 2 -->
-    <!-- Author: Adrian Sim Huan Tze -->
-    <!-- Date: 5th November 2020 -->
-    <!-- Validated: 5th November 2020-->
-
-    <head>
-        <title>MyFriend - Friend List</title>
-        <meta charset="utf-8">
-        <meta name="author" content="Adrian Sim Huan Tze">
-        <meta name="description" content="Assignment 2">
-        <meta name="keywords" content="job, vacancy, posting">
-        <link rel="stylesheet" type="text/css" href="style/style.css">
-        <link rel="icon" href="images/icon.png">
-    </head>
-
-    <body>
-
-        <h1>
-            My Friend System
-        </h1>
-
-        <h2><?php echo $profile_name . "'s Friend List Page" ?></h2>
-
-        <?php
+<?php
             include "settings.php";
             // Create connection
             $conn = @mysqli_connect($servername, $username, $password, $dbname);
@@ -137,7 +111,48 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
 
         ?>
 
-        <h3><?php echo "Total number of friends is " . $num_of_friends ?></h3>
+<!DOCTYPE html>
+
+<html lang="en">
+    <!-- Description: Assignment 2 -->
+    <!-- Author: Adrian Sim Huan Tze -->
+    <!-- Date: 5th November 2020 -->
+    <!-- Validated: 5th November 2020-->
+
+    <head>
+        <title>UniversityConnect - Friend List</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Adrian Sim Huan Tze">
+        <meta name="description" content="Assignment 2">
+        <meta name="keywords" content="job, vacancy, posting">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <link rel="icon" href="images/icon.png">
+    </head>
+
+    <header>
+
+        <img src = 'images/companylogo.png' alt='icon'>
+        <td>
+            <?php 
+                echo "<a class = 'navigate' href='friendadd.php?user_id=" .
+                     $user_id . "&num_of_friends=" .
+                     $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>" 
+            ?>
+        </td>
+        <td><a href="logout.php">Log Out</a></td>
+
+    </header>
+
+    <body>
+
+        <h1>
+            University Connect
+        </h1>
+
+        <div class="text">
+            <h2><?php echo $profile_name . "'s Friend List" ?></h2>
+            <p class="friendlist"><?php echo "Total number of friends is " . $num_of_friends ?></p>
+        </div>
 
         <table id="friendlist">
                 <th>
@@ -155,7 +170,8 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
                 </th>
                 <?php
                 if (count($user_friends) == 0) {
-                        echo "<p>You have not added any friends yet</p>";
+                        echo "<p class = 'friendlist'>You have not added any friends yet</p>";
+                        echo "<a href='friendadd.php' id ='addFriend'>Add a friend now</a>";
                 } else {
                     foreach ($user_friends as $key => $value) {
                             echo "<tr>";
@@ -181,17 +197,8 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
                 }
                 ?>
         </table>
-
-        <table id="navigation">
-            <tbody>
-                <tr>
-                    <td><?php echo "<a class = 'navigate' href='friendadd.php?user_id=" .
-                     $user_id . "&num_of_friends=" .
-                     $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>" ?></td>
-                    <td><a class = "navigate" href="logout.php">Log out</a></td>
-                </tr>
-            </tbody>
-        </table>
     </body>
+
+    <?php include "footer_login.php" ?>
 
 </html>
