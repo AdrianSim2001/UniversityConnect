@@ -13,22 +13,28 @@ if (!$conn) {
     $user_email_arr = array("johnDoe@gmail.com", "CarlieChin1997@gmail.com",
     "BarkleyDrex@gmail.com", "AdamSmith67@gmail.com", "EmmaWatson@gmail.com",
     "55JaneMary@gmail.com", "ButterflyHun@gmail.com", "JaniceGyu@gmail.com",
-    "CameroBrooke12@gmail.com", "GaryChin@gmail.com");
+    "CameroBrooke12@gmail.com", "GaryChin@gmail.com", "loong@gmail.com",
+    "vincent@gmail.com", "anthony@gmail.com", "karl@gmail.com",
+    "JulieTan@gmail.com", "YBB@gmail.com", "namewee@gmail.com");
 
     $user_password_arr = array("080867John","Chin1997Carlie", "DrexlerAmazing123",
     "Smith_909087", "EmmaWatson897654", "SpidermanHunting", "Sky_34_butterfly",
-    "Janice_@1236", "BrookeTheBest", "Chin67_#$56");
+    "Janice_@1236", "BrookeTheBest", "Chin67_#$56", "loong",
+     "vincent", "anthony", "karl", "julie", "YBB", "namewee");
 
     $user_profile_arr = array("johnDoe", "CarlieChin", "DrexBarkley", "AdamSmith",
-    "EmmaWatson", "JaneMary", "HunButterfly", "JaniceGyu", "CameroBrooke", "GaryChin");
+    "EmmaWatson", "JaneMary", "HunButterfly", "JaniceGyu", "CameroBrooke", "GaryChin",
+     "Loong", "Vincent", "Anthony", "Karl", "Julie Tan", "YBB", "NameWee");
 
     $date_created = array("2016-2-12", "2016-4-30", "2012-9-22", "2020-1-21", "2009-3-21",
-    "2018-7-23", "2016-6-10", "2013-12-3", "2015-4-21", "2017-12-31");
+    "2018-7-23", "2016-6-10", "2013-12-3", "2015-4-21", "2017-12-31", "2016-4-30", "2013-12-3",
+    "2018-7-23", "2009-3-21", "2019-3-09", "2017-3-31", "2010-3-12");
 
-    $user_friends_num = array(4,2,0,1,3,0,3,2,3,2);
+    $user_friends_num = array(4,2,0,1,3,0,3,2,3,2,0,1,1,3,0,0,0);
 
     $myfriends_id = array(array(2,5,7,8), array(1,4), array(), array(2), array(1,9,10),
-     array(), array(1,8,9), array(1,7), array(5,10,7), array(5,9));
+     array(), array(1,8,9), array(1,7), array(5,10,7), array(5,9), array(), array(10),
+     array(8), array(1,7,11), array(), array(), array());
 
     $sql = "SELECT * FROM users";
 
