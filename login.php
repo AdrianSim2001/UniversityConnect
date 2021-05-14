@@ -14,16 +14,13 @@
         <link rel="icon" href="images/companylogo.png">
     </head>
 
-    <header>
-
-        <a class='footerAnchor' href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
-        <td><a href="index.php">Home</a></td>
-        <td><a href="about.php">About</a></td>
-        <td><a href="login.php">Log In</a></td>
-
-    </header>
-
     <body>
+        <header>
+            <a href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
+            <div><a href="index.php">Home</a></div>
+            <div><a href="about.php">About</a></div>
+            <div><a class="active" href="login.php">Log In</a></div>
+        </header>
 
         <?php
             include "system_functions.php";
