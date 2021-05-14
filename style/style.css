@@ -74,18 +74,44 @@ button:hover {
 /* Header Style */
 
 header img {
-  margin-right: 500px;
+  margin-right: 200px;
   max-width: 100px;
 }
 
 header a:hover {
-  transition: 0.7s;
+  transition: 0.3s;
   color: black;
   scale: 1.2;
 }
 
 nav ul li a:hover {
   color: #0088a9;
+}
+
+header div {
+  min-width: fit-content;
+  margin: 0;
+  float: right;
+  clear: both;
+}
+
+header div a {
+  border-bottom: 5px solid #6a87cf;
+  padding: 20px 50px;
+  margin: 0;
+}
+
+header div a:hover,
+header div a.active:hover {
+  border-bottom: 5px solid #6a87cf;
+  background-color: #6a87cf;
+  color: white;
+}
+
+header div a.active {
+  border-bottom: 5px solid #142c6b;
+  background-color: #445eac;
+  color: white;
 }
 
 /* Body style */
@@ -542,6 +568,3 @@ div.about-container p:nth-child(even) img{
   margin-right: 30px;
   float: left;
 }
-
-/* active menu */
-
