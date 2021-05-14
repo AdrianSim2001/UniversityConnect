@@ -505,7 +505,7 @@ footer .footerAnchor img {
 
 div.about-container{
   margin: 30px auto 30px auto;
-  width: 60vw;
+  width: 80vw;
   min-width: 800px;
 }
 
@@ -542,3 +542,6 @@ div.about-container p:nth-child(even) img{
   margin-right: 30px;
   float: left;
 }
+
+/* active menu */
+
