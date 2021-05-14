@@ -1,13 +1,13 @@
 <div>
 <?php
-    include_once "settings.php";
-    include "system_functions.php";
+include_once "settings.php";
+include "system_functions.php";
 
-    // Create connection to database
-    $conn = @mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
+// Create connection to database
+$conn = @mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
 if (!$conn) {
-    die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
+die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
 }
 
     $user_email_arr = array("johnDoe@gmail.com", "CarlieChin1997@gmail.com",
@@ -36,22 +36,22 @@ if (!$conn) {
      array(), array(1,8,9), array(1,7), array(5,10,7), array(5,9), array(), array(10),
      array(8), array(1,7,11), array(), array(), array());
 
-    $sql = "SELECT * FROM users";
+$sql = "SELECT * FROM users";
 
-    $queryResult = @mysqli_query($conn, $sql) or die("<p>Unable to access to database table.</p>");
+$queryResult = @mysqli_query($conn, $sql) or die("<p>Unable to access to database table.</p>");
 
-    $row = mysqli_num_rows($queryResult);
+$row = mysqli_num_rows($queryResult);
 
-    if ($row <= 0) {
-        $result = populatetables_users($conn, $user_email_arr, $user_password_arr, $user_profile_arr, $date_created, $user_friends_num);
+if ($row <= 0) {
+    $result = populatetables_users($conn, $user_email_arr, $user_password_arr, $user_profile_arr, $date_created, $user_friends_num);
 
-        $result1 = populatetables_myfriends($conn, $myfriends_id);
+    $result1 = populatetables_myfriends($conn, $myfriends_id);
 
-        if ($result1 && $result) {
-            echo "<p>Tables successfully created and populated</p>";
-        }
+    if ($result1 && $result) {
+        echo "<p>Tables successfully created and populated</p>";
     }
+}
 
-    @mysqli_close($conn);
-    ?>
+@mysqli_close($conn);
+?>
 </div>

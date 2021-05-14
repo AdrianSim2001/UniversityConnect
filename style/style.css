@@ -74,18 +74,44 @@ button:hover {
 /* Header Style */
 
 header img {
-  margin-right: 500px;
+  margin-right: 200px;
   max-width: 100px;
 }
 
 header a:hover {
-  transition: 0.7s;
+  transition: 0.3s;
   color: black;
   scale: 1.2;
 }
 
 nav ul li a:hover {
   color: #0088a9;
+}
+
+header div {
+  min-width: fit-content;
+  margin: 0;
+  float: right;
+  clear: both;
+}
+
+header div a {
+  border-bottom: 5px solid #6a87cf;
+  padding: 20px 50px;
+  margin: 0;
+}
+
+header div a:hover,
+header div a.active:hover {
+  border-bottom: 5px solid #6a87cf;
+  background-color: #6a87cf;
+  color: white;
+}
+
+header div a.active {
+  border-bottom: 5px solid #142c6b;
+  background-color: #445eac;
+  color: white;
 }
 
 /* Body style */
@@ -121,10 +147,11 @@ body h1 {
   background-color: #375296;
   color: white;
   width: 35%;
+  min-width: 300px;
   border: none;
   border-radius: 50px;
   justify-content: center;
-  margin: 100px auto;
+  margin: 100px auto 50px auto;
   text-align: center;
 }
 
@@ -498,4 +525,46 @@ footer .footerAnchor img {
   height: auto;
   clear: both;
   border-radius: 40px;
+}
+
+/* about.php */
+
+div.about-container{
+  margin: 30px auto 30px auto;
+  width: 80vw;
+  min-width: 800px;
+}
+
+div.about-container p {
+  margin: 0 0 50px 0;
+  text-align: justify;
+  padding: 30px 50px;
+  width: 100%;
+  min-height: 300px;
+  border: 5px solid #375296;
+  box-shadow: 5px 10px #a8a8a8;
+  background-color: white;
+}
+
+div.about-container p:nth-child(odd) {
+  border-radius: 70px 0 70px 0;
+}
+
+div.about-container p:nth-child(even) {
+  border-radius: 0 70px 0 70px;
+}
+
+div.about-container p img{
+  width: 300px;
+  border-radius: 10px;
+}
+
+div.about-container p:nth-child(odd) img{
+  margin-left: 30px;
+  float: right;
+}
+
+div.about-container p:nth-child(even) img{
+  margin-right: 30px;
+  float: left;
 }
