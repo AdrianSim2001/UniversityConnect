@@ -22,7 +22,8 @@ if (!$conn) {
 if (@mysqli_query($conn, $sql)) {
     $sql = "CREATE TABLE IF NOT EXISTS `myfriends`(
     user_id INT NOT NULL,
-    friend_id INT NOT NULL   
+    friend_id INT NOT NULL,
+    ratings INT   
         )";
     if (!@mysqli_query($conn, $sql)) {
         die("<p>Failed creating tables: " . mysqli_error($conn) . "</p>");
