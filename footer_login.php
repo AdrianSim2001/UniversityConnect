@@ -1,7 +1,7 @@
 <div>
 <?php echo "
 <footer>
-    <a class='footerAnchor' href='index.php'><img src = 'images/companylogo.png' alt='icon'></a>
+    <a class='footerAnchor' href='logout.php'><img src = 'images/companylogo.png' alt='icon'></a>
     <table id = 'footer'>
         <thead>
             <tr>
