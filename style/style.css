@@ -121,10 +121,11 @@ body h1 {
   background-color: #375296;
   color: white;
   width: 35%;
+  min-width: 300px;
   border: none;
   border-radius: 50px;
   justify-content: center;
-  margin: 100px auto;
+  margin: 100px auto 50px auto;
   text-align: center;
 }
 
@@ -498,4 +499,28 @@ footer .footerAnchor img {
   height: auto;
   clear: both;
   border-radius: 40px;
+}
+
+/* about.php */
+
+div.about-container{
+  margin: 0 auto 30px auto;
+  width: 80%;
+  min-width: 600px;
+}
+
+div.about-container p {
+  margin: 0 0 50px 0;
+  text-align: justify;
+  padding: 30px 50px;
+  width: 100%;
+  border: 5px solid black;
+}
+
+div.about-container p:nth-child(odd) {
+  border-radius: 70px 0 70px 0;
+}
+
+div.about-container p:nth-child(even) {
+  border-radius: 0 70px 0 70px;
 }

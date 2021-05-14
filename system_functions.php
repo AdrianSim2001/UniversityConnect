@@ -6,7 +6,7 @@
         // the function will loop through each of the element in the arrays and insert them into the Database Table 'users'
         for ($i=0; $i < 10; $i++) { 
 
-            $user_password[$i] = hash("sha256", $user_password[$i]);
+            // $user_password[$i] = hash("sha256", $user_password[$i]);
             $sql = "INSERT INTO users (user_email, password, profile_name, date_started, num_of_friends)
                     VALUES ('$user_email[$i]', '$user_password[$i]', '$user_profile[$i]', '$date_created[$i]', '$friends_num[$i]')";
             if (@mysqli_query($link, $sql)) {

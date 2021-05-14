@@ -2,14 +2,14 @@
 
 <html lang="en">
     <!-- Description: Assignment 2 -->
-    <!-- Author: Adrian Sim Huan Tze -->
+    <!-- Author: Kenny Tan Chee Lun -->
     <!-- Date: 24th October 2020 -->
     <!-- Validated: 25th October 2020-->
 
     <head>
         <title>MyFriend - Home</title>
         <meta charset="utf-8">
-        <meta name="author" content="Adrian Sim Huan Tze">	
+        <meta name="author" content="Kenny Tan Chee Lun">	
         <meta name="description" content="Assignment 2">
         <meta name="keywords" content="job, vacancy, posting">
         <link rel="stylesheet" type="text/css" href="style/style.css">
@@ -28,61 +28,18 @@
     <body>
 
         <h1>
-            My Friend System
+            University Connect
         </h1>
 
-        <h2>Assignment Home Page</h2>
+        <h2>About the University</h2>
 
-        <table>
-                <tr>
-                    <td>
-                        Name:
-                    </td>
-                    <td>
-                        Adrian Sim Huan Tze
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Student ID:
-                    </td>
-                    <td>
-                        101225244
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Email:
-                    </td>
-                    <td id="email">
-                        <a href="mailto: 101225244@students.swinburne.edu.my">101225244@students.swinburne.edu.my</a>
-                    </td>
-                </tr>
-        </table>
+        <div class="about-container">
+            <p>The University is Established in 1990. It is the third largest campus of Malaysia's largest university. We are a premier research-intensive Malaysia university ranked among the top 100 universities in the world by the Times Higher Education World University Rankings, and a member of Malaysia prestigious Group. The University is also ranked 55 in the QS 2021 World University Rankings.</p>
 
-        <div id="declaration">
-            <p>
-                I declare that this assignment is my individual work. I have not worked collaboratively nor have 
-                I copied from any other student's work or from any other source.
-            </p>
+            <p>A self-accrediting university, our campus offers a distinctly international and culturally rich environment with approximately 8,400 students from 78 different countries. Students are taught by highly qualified academic staff from across the world and the same rigorous standards with the university in the overseas.</p>
+
+            <p>In addition to a vibrant campus experience with excellent catering facilities, food outlets, gymnasium and outdoor swimming pool, the Sunway City township in which the campus is situated offer numerous shopping and leisure opportunities within walking distance. Students can also take advantage of many clubs and societies that organise exciting events, be it flea markets and competitions or cultural and music festivals.</p>
         </div>
-
-        <?php
-            include_once "CreateDatabase.php";
-            include "CreateTables.php";
-            include_once "PopulateTable.php";
-        ?>
-
-        <table>
-            <tbody>
-                <tr>
-                    <td><a href="signup.php">Sign-Up</a></td>
-                    <td><a href="login.php">Log-In</a></td>
-                    <td><a href="about.php">About</a></td>
-                </tr>
-            </tbody>
-        </table>
-
         
         <?php include 'footer.php' ?>
     </body>
