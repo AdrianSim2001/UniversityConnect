@@ -34,11 +34,24 @@
         <h2>About the University</h2>
 
         <div class="about-container">
-            <p>The University is Established in 1990. It is the third largest campus of Malaysia's largest university. We are a premier research-intensive Malaysia university ranked among the top 100 universities in the world by the Times Higher Education World University Rankings, and a member of Malaysia prestigious Group. The University is also ranked 55 in the QS 2021 World University Rankings.</p>
-
-            <p>A self-accrediting university, our campus offers a distinctly international and culturally rich environment with approximately 8,400 students from 78 different countries. Students are taught by highly qualified academic staff from across the world and the same rigorous standards with the university in the overseas.</p>
-
-            <p>In addition to a vibrant campus experience with excellent catering facilities, food outlets, gymnasium and outdoor swimming pool, the Sunway City township in which the campus is situated offer numerous shopping and leisure opportunities within walking distance. Students can also take advantage of many clubs and societies that organise exciting events, be it flea markets and competitions or cultural and music festivals.</p>
+            <p> 
+                <img src="images/universityBuilding.jpg"> 
+                The University is Established in 1990. It is the third largest campus of Malaysia's largest university. 
+                We are a premier research-intensive Malaysia university ranked among the top 100 universities in the world by the Times Higher Education World 
+                University Rankings, and a member of Malaysia prestigious Group. The University is also ranked 55 in the QS 2021 World University Rankings.
+            </p>
+            <p> 
+                <img src="images/universityHall.jpg"> 
+                A self-accrediting university, our campus offers a distinctly international and culturally rich environment with approximately 8,400 students
+                from 78 different countries. Students are taught by highly qualified academic staff from across the world and the same rigorous standards with 
+                the university in the overseas.
+            </p>
+            <p> 
+                <img src="images/universitySwimmingPool.jpg"> 
+                In addition to a vibrant campus experience with excellent catering facilities, food outlets, gymnasium and outdoor swimming pool, the Sunway 
+                City township in which the campus is situated offer numerous shopping and leisure opportunities within walking distance. Students can also 
+                take advantage of many clubs and societies that organise exciting events, be it flea markets and competitions or cultural and music festivals.
+            </p>
         </div>
         
         <?php include 'footer.php' ?>
