@@ -272,6 +272,7 @@ foreach ($not_user_friends_pagination as $key => $value) {
 
         <img src = 'images/companylogo.png' alt='icon'>
         <td><a href="friendlist.php">Friend Lists</a></td>
+        <td><a href="posting.php">Discussion</a></td>
         <td><a href="logout.php">Log Out</a></td>
 
     </header>

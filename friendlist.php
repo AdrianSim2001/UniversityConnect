@@ -139,6 +139,7 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
                         $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>" 
                 ?>
             </td>
+            <td><a href="posting.php">Discussion</a></td>
             <td><a href="logout.php">Log Out</a></td>
         </header>
         
