@@ -4,9 +4,9 @@
         $success = true;
 
         // the function will loop through each of the element in the arrays and insert them into the Database Table 'users'
-        for ($i=0; $i < 10; $i++) { 
+        for ($i=0; $i < count($user_email); $i++) { 
 
-            $user_password[$i] = hash("sha256", $user_password[$i]);
+            //$user_password[$i] = hash("sha256", $user_password[$i]);
             $sql = "INSERT INTO users (user_email, password, profile_name, date_started, num_of_friends)
                     VALUES ('$user_email[$i]', '$user_password[$i]', '$user_profile[$i]', '$date_created[$i]', '$friends_num[$i]')";
             if (@mysqli_query($link, $sql)) {
@@ -302,7 +302,7 @@
         $sql = "UPDATE myfriends SET ratings = $rating WHERE friend_id = $friend_id AND user_id = $user_id";
 
         if (!@mysqli_query($conn, $sql)) {
-            die("Unable to update data from server");
+            die(mysqli_error($conn));
         }
 
         function_alert("Thanks for your rating!");
