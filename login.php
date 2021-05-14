@@ -73,7 +73,7 @@
 
                 <label for="login_password">Password:</label> </br>
                 <input type="password" name="login_password" id="login_password" 
-                placeholder="password" required = "required"/> 
+                placeholder="Enter your password" required = "required"/> 
                 <?php
                 if ($btnclicked) {
                     if ($errorfield == "password") {
