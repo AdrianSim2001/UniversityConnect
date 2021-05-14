@@ -3,8 +3,7 @@
 <html lang="en">
     <!-- Description: Assignment 2 -->
     <!-- Author: Kenny Tan Chee Lun -->
-    <!-- Date: 24th October 2020 -->
-    <!-- Validated: 25th October 2020-->
+    <!-- Date: 14th May 2021 -->
 
     <head>
         <title>MyFriend - Home</title>
