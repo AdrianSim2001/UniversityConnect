@@ -9,10 +9,14 @@ Description: Assignment 1
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #fffaf0;
+} */
+
+body {
   background-color: #fffaf0;
 }
 
@@ -44,7 +48,7 @@ header {
   margin-right: auto;
   border-radius: 150px;
 }
-
+/* 
 nav ul {
   list-style: none;
 }
@@ -56,7 +60,7 @@ nav ul li {
 
 nav ul li a {
   transition: all 0.3s ease 0s;
-}
+} */
 
 button {
   padding: 9px 25px;
@@ -71,8 +75,44 @@ button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
 
-/* Header Style */
+/* Navigation style */
 
+.navbar {
+  border-radius: 0;
+  padding: 0 30px;
+  background-color: white;
+}
+
+.navbar .company-name{
+  text-transform: capitalize;
+  margin-left: 20px;
+}
+
+.navbar .nav-item a {
+  text-transform: capitalize !important;
+  color: #000 !important;
+  font-size: 20px !important;
+}
+
+.navbar .nav-item a:hover,
+.navbar .nav-item.active a:hover {
+  color: #ff7b00a2 !important;
+}
+
+.navbar .nav-item.active a {
+  color: #ff7b00 !important;
+}
+
+.navbar .container {
+  background-color: white;
+}
+
+.navbar img{
+  width: 80px;
+}
+
+/* Header Style */
+/* 
 header img {
   margin-right: 200px;
   max-width: 100px;
@@ -112,7 +152,7 @@ header div a.active {
   border-bottom: 5px solid #142c6b;
   background-color: #445eac;
   color: white;
-}
+} */
 
 /* Body style */
 
@@ -151,7 +191,7 @@ body h1 {
   border: none;
   border-radius: 50px;
   justify-content: center;
-  margin: 100px auto 50px auto;
+  margin: 20px auto;
   text-align: center;
 }
 
@@ -264,7 +304,7 @@ form {
   font-family: "Montserrat", sans-serif;
   background-color: white;
   color: #375296;
-  margin-bottom: 300px;
+  margin: 80px auto;
   padding-bottom: 30px;
 }
 

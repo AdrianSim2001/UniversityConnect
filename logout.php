@@ -1,4 +1,3 @@
-<div>
 <?php
 session_start();
 if (isset($_SESSION['profile_name']) && isset($_SESSION['user_friends'])) {
@@ -11,4 +10,3 @@ if (isset($_SESSION['profile_name']) && isset($_SESSION['user_friends'])) {
 header('Location: index.php');
 session_destroy();
 ?>
-</div>
