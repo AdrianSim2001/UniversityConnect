@@ -1,11 +1,9 @@
 /*
-Author: Adrian Sim Huan Tze
+Author: Adrian Sim Huan Tze, Kenny Tan Chee Lun
 Created: 28 September 2020
-Last modified: 3 October 2020
+Last modified: May 2021
 Description: Assignment 1
 */
-
-/* navigation style */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
@@ -94,9 +92,12 @@ button:hover {
   font-size: 20px !important;
 }
 
-.navbar .nav-item a:hover,
-.navbar .nav-item.active a:hover {
+.navbar .nav-item a:hover {
   color: #ff7b00a2 !important;
+}
+
+.navbar .navbar-brand:hover {
+  color: #375296cc !important;
 }
 
 .navbar .nav-item.active a {
