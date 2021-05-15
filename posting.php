@@ -6,110 +6,64 @@ if (!isset($_SESSION['profile_name'])) {
 } else {
     $profile_name = $_SESSION['profile_name'];
 }
-
-if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (!isset($_GET['rate']))) {
-    $unfriend_id = $_GET['friend_id'];
-    $user_id = $_GET['user_id'];
-    Unfriend($unfriend_id, $user_id);
-}
-
-if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']))) {
-    $friend_id = $_GET['friend_id'];
-    $user_id = $_GET['user_id'];
-    $rating = $_GET['rate'];
-    Ratefriend($friend_id, $user_id, $rating);
-}
 ?>
 
 <?php
-            include "settings.php";
-            // Create connection
-            $conn = @mysqli_connect($servername, $username, $password, $dbname);
-            // Check connection
-        if (!$conn) {
-            die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
-        }
+include "settings.php";
+// Create connection
+$conn = @mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
+}
 
-            // change default database to '101225244' database
-            $dbSelect = @mysqli_select_db($conn, 101225244);
+// change default database to '101225244' database
+$dbSelect = @mysqli_select_db($conn, 101225244);
 
-        if (!$dbSelect) {
-            die("<p>The database is not available.</p>");
-        }
+if (!$dbSelect) {
+die("<p>The database is not available.</p>");
+}
 
-            $sql = "SELECT * FROM users WHERE profile_name =?";
+$sql = "SELECT * FROM users WHERE profile_name =?";
 
-            $prepared_stmt = mysqli_prepare($conn, $sql);
+$prepared_stmt = mysqli_prepare($conn, $sql);
 
-            //Bind input variables to prepared statement
-            mysqli_stmt_bind_param($prepared_stmt, 's', $profile_name);
+//Bind input variables to prepared statement
+mysqli_stmt_bind_param($prepared_stmt, 's', $profile_name);
 
-            //Execute prepared statement
-            mysqli_stmt_execute($prepared_stmt);
+//Execute prepared statement
+mysqli_stmt_execute($prepared_stmt);
 
-            // Get resultset
-            $queryResult =  mysqli_stmt_get_result($prepared_stmt)
-                or die("<p>Unable to select from database table</p>");
+// Get resultset
+$queryResult =  mysqli_stmt_get_result($prepared_stmt)
+    or die("<p>Unable to select from database table</p>");
 
-            // Close the prepared statement
-            @mysqli_stmt_close($prepared_stmt);
+// Close the prepared statement
+@mysqli_stmt_close($prepared_stmt);
 
-            $row = mysqli_fetch_row($queryResult);
+$row = mysqli_fetch_row($queryResult);
 
-            $user_id = $row[0];
-            $num_of_friends = $row[5];
+$user_id = $row[0];
+$num_of_friends = $row[5];
 
-            $sql = "SELECT friend_id FROM myfriends WHERE user_id = ?";
+$sql = "SELECT friend_id FROM myfriends WHERE user_id = ?";
 
-            $prepared_stmt = mysqli_prepare($conn, $sql);
+$prepared_stmt = mysqli_prepare($conn, $sql);
 
-            //Bind input variables to prepared statement
-            mysqli_stmt_bind_param($prepared_stmt, 's', $user_id);
+//Bind input variables to prepared statement
+mysqli_stmt_bind_param($prepared_stmt, 's', $user_id);
 
-            //Execute prepared statement
-            mysqli_stmt_execute($prepared_stmt);
+//Execute prepared statement
+mysqli_stmt_execute($prepared_stmt);
 
-            // Get resultset
-            $queryResult =  mysqli_stmt_get_result($prepared_stmt)
-                or die("<p>Unable to select from database table</p>");
+// Get resultset
+$queryResult =  mysqli_stmt_get_result($prepared_stmt)
+    or die("<p>Unable to select from database table</p>");
 
-            // Close the prepared statement
-            @mysqli_stmt_close($prepared_stmt);
-
-            $row = mysqli_fetch_row($queryResult);
-
-            $user_friends = array();
-
-        while ($row) {
-                $sql = "SELECT * FROM users WHERE user_id =?";
-
-                $prepared_stmt = mysqli_prepare($conn, $sql);
-
-                //Bind input variables to prepared statement
-                mysqli_stmt_bind_param($prepared_stmt, 's', $row[0]);
-
-                //Execute prepared statement
-                mysqli_stmt_execute($prepared_stmt);
-
-                // Get resultset
-                $queryResult_new =  mysqli_stmt_get_result($prepared_stmt)
-                    or die("<p>Unable to select from database table</p>");
-
-                // Close the prepared statement
-                @mysqli_stmt_close($prepared_stmt);
-
-                $record = mysqli_fetch_row($queryResult_new);
-
-                array_push($user_friends, array($row[0],$record[3],$user_id));
-                $row = mysqli_fetch_row($queryResult);
-        }
-
-            $_SESSION["user_friends"] = $user_friends;
-
-            @mysqli_close($conn);
-
-
-        ?>
+// Close the prepared statement
+@mysqli_stmt_close($prepared_stmt);
+@mysqli_close($conn);
+?>
 
 <!DOCTYPE html>
 
@@ -127,6 +81,7 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
         <meta name="keywords" content="job, vacancy, posting">
         <link rel="stylesheet" type="text/css" href="style/style.css">
         <link rel="icon" href="images/icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
 
     <body>
@@ -147,8 +102,29 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
             University Connect
         </h1>
 
-        <div class="text">
+        <div id="discussion">
             <h2>Discussion Board</h2>
+        </div>
+
+        <div id="container">
+            <div id="result-wrapper">
+                <div id="result">
+                    <?php
+                        include("load.php");
+                    ?>
+                </div>			
+            </div>
+
+            <form method='post' action="#" onsubmit="return post();" id="my_form" name="my_form">
+                    <div class="form-text">
+                        <input type="text" style="display:none" id="username" value="<?= $_SESSION['profile_name'] ?>">
+                        <input type="hidden" id="user_id" value="<?= $user_id ?>">
+                        <textarea id="comment"></textarea>
+                    </div>
+                    <div class="form-btn">
+                        <input type="submit" value="Send" id="btn" name="btn"/>
+                    </div>
+            </form>
         </div>
 
     </body>
@@ -156,3 +132,56 @@ if (isset($_GET['friend_id']) && isset($_GET['user_id']) && (isset($_GET['rate']
     <?php include "footer_login.php" ?>
 
 </html>
+
+<script>
+$(document).ready(function()
+    {
+        $(document).bind('keypress', function(e) {
+            if(e.keyCode==13){
+                 $('#my_form').submit();
+				 $('#comment').val("");
+             }
+        });
+	});
+</script>
+<script type="text/javascript">
+function post()
+{
+  var comment = document.getElementById("comment").value;
+  var name = document.getElementById("username").value;
+  var id = document.getElementById("user_id").value;
+  if(comment && name)
+  {
+        $.ajax
+        ({
+        type: 'POST',
+        url: 'commentajax.php',
+        data: 
+        {
+            user_id: id,
+            user_comm:comment,
+            user_name:name
+        },
+        cache: false,
+        success: function (response) 
+        {
+            console.log(response);
+            document.getElementById("comment").value="";
+        },
+        error: function(xhr, status, error) {
+            console.log(xhr);
+        }
+        });
+    }
+  
+  return false;
+}
+</script>
+<script>
+ function autoRefresh_div()
+ {
+      $("#result").load("load.php").show();// a function which will load data from other file after x seconds
+  }
+ 
+  setInterval('autoRefresh_div()', 2000);
+</script>
