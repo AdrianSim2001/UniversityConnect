@@ -59,10 +59,13 @@
     include_once "CreateDatabase.php";
     include "CreateTables.php";
     include_once "PopulateTable.php";
+    include 'footer.php'
     ?>
 
-
-    <?php include 'footer.php' ?>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

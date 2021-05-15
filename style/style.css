@@ -78,12 +78,13 @@ button:hover {
 .navbar {
   border-radius: 0;
   padding: 0 30px;
-  background-color: white;
+  background-color: rgb(247, 247, 247);
 }
 
 .navbar .company-name{
   text-transform: capitalize;
   margin-left: 20px;
+  color: #375296 !important;
 }
 
 .navbar .nav-item a {
@@ -96,16 +97,12 @@ button:hover {
   color: #ff7b00a2 !important;
 }
 
-.navbar .navbar-brand:hover {
+.navbar .navbar-brand:hover .company-name {
   color: #375296cc !important;
 }
 
 .navbar .nav-item.active a {
   color: #ff7b00 !important;
-}
-
-.navbar .container {
-  background-color: white;
 }
 
 .navbar img{
