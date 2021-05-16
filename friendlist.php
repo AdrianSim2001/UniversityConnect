@@ -129,19 +129,20 @@ $_SESSION["user_friends"] = $user_friends;
     <link rel="icon" href="images/icon.png">
 </head>
 
-<body>
-    <header>
-        <img src='images/companylogo.png' alt='icon'>
-        <td>
-            <?php
-            echo "<a class = 'navigate' href='friendadd.php?user_id=" .
-                $user_id . "&num_of_friends=" .
-                $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>"
-            ?>
+<header>
+    <img src='images/companylogo.png' alt='icon'>
+    <td>
+        <?php
+        echo "<a class = 'navigate' href='friendadd.php?user_id=" .
+            $user_id . "&num_of_friends=" .
+            $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>"
+        ?>
         </td>
-        <td><a href="posting.php">Discussion</a></td>
-        <td><a href="logout.php">Log Out</a></td>
-    </header>
+    <td><a href="posting.php">Discussion</a></td>
+    <td><a href="logout.php">Log Out</a></td>
+</header>
+
+<body>
 
     <h1>
         University Connect
