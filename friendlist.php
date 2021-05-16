@@ -125,81 +125,102 @@ $_SESSION["user_friends"] = $user_friends;
     <meta name="author" content="Adrian Sim Huan Tze">
     <meta name="description" content="Assignment 2">
     <meta name="keywords" content="job, vacancy, posting">
+    <link rel="icon" href="images/companylogo.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="icon" href="images/icon.png">
 </head>
 
-<header>
-    <img src='images/companylogo.png' alt='icon'>
-    <td>
-        <?php
-        echo "<a class = 'navigate' href='friendadd.php?user_id=" .
-            $user_id . "&num_of_friends=" .
-            $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>"
-        ?>
-        </td>
-    <td><a href="posting.php">Discussion</a></td>
-    <td><a href="logout.php">Log Out</a></td>
-</header>
-
 <body>
+    <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand"><img src='images/companylogoNoText.png' alt='icon'><span class="company-name">University Connect</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto mr-md-3">
+                    <li class="nav-item active"><a href="" class="nav-link">Friend Lists</a></li>
+                    <li class="nav-item">
+                        <?php
+                        echo "<a class = 'navigate nav-link' href='friendadd.php?user_id=" .
+                            $user_id . "&num_of_friends=" .
+                            $num_of_friends . "'>Add Friends</a>"
+                        ?>
+                    </li>                    
+                    <li class="nav-item"><a href="posting.php" class="nav-link">Discussion</a></li>
+                    <li class="nav-item"><a href="logout.php" class="nav-link">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <h1>
-        University Connect
-    </h1>
+    <h1>Friend List</h1>
 
     <div class="text">
-        <h2><?php echo $profile_name . "'s Friend List" ?></h2>
-        <p class="friendlist"><?php echo "Total number of friends is " . $num_of_friends ?></p>
+        <h2>Hello, <?php echo $profile_name ?></h2>
+        <p class="friendlist"><?php echo "Total number of friends: " . $num_of_friends ?></p>
     </div>
 
-    <table id="friendlist">
-        <th>
-            <tr>
-                <td>
-                    Name of Friends
-                </td>
-                <td>
-                    Action
-                </td>
-                <td>
-                    Rate your friends
-                </td>
-            </tr>
-        </th>
-        <?php
-        if (count($user_friends) == 0) {
-            echo "<p class = 'friendlist'>You have not added any friends yet</p>";
-            echo "<a id = 'addFriend' href='friendadd.php?user_id=" .
-                $user_id . "&num_of_friends=" .
-                $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>";
-        } else {
-            foreach ($user_friends as $key => $value) {
-                echo "<tr>";
-                echo "<td>" . $value[1] . "</td>";
-                echo "<td><a class = 'unfriend' href='friendlist.php?friend_id=" . $value[0] .
-                    "&user_id=" . $user_id . "'>Unfriend</a></td>";
-                echo "<td><a href='friendlist.php?rate=1&friend_id=" . $value[0] . "&user_id=" .
-                    $user_id . "'><img src = 'images/rating1.png' alt = 'rating1'></a>
-                             <a href='friendlist.php?rate=2&friend_id=" .
-                    $value[0] . "&user_id=" . $user_id .
-                    "'><img src = 'images/rating2.png' alt = 'rating2'></a>
-                               <a href='friendlist.php?rate=3&friend_id=" .
-                    $value[0] . "&user_id=" . $user_id .
-                    "'><img src = 'images/rating3.png' alt = 'rating3'></a>
-                                <a href='friendlist.php?rate=4&friend_id=" .
-                    $value[0] . "&user_id=" . $user_id .
-                    "'><img src = 'images/rating4.png' alt = 'rating4'></a>
-                                 <a href='friendlist.php?rate=5&friend_id=" .
-                    $value[0] . "&user_id=" . $user_id .
-                    "'><img src = 'images/rating5.png' alt = 'rating5'></a></td>";
-                echo "</tr>";
+    <div class="friendlist-container">
+        <table id="friendlist">
+            <?php
+            if (count($user_friends) == 0) {
+                echo "<p class = 'friendlist'>You have not added any friends yet</p>";
+                echo "<a id = 'addFriend' href='friendadd.php?user_id=" .
+                    $user_id . "&num_of_friends=" .
+                    $num_of_friends . "'><span></span><span></span><span></span><span></span>Add Friends</a>";
+            } else {
+                echo "<tr>
+                        <td>
+                            Name of Friends
+                        </td>
+                        <td>
+                            Action
+                        </td>
+                        <td>
+                            Rate your friends
+                        </td>
+                    </tr>";
+                foreach ($user_friends as $key => $value) {
+                    echo "
+                        <tr>
+                            <td>" . $value[1] . "</td>
+                            <td>
+                                <a class = 'unfriend' href='friendlist.php?friend_id=" . $value[0] .
+                                "&user_id=" . $user_id . "'>Unfriend</a>
+                            </td>
+                            <td>
+                                <a href='friendlist.php?rate=1&friend_id=" . $value[0] . "&user_id=" .
+                                $user_id . "'><img src = 'images/rating1.png' alt = 'rating1'></a>
+                                        <a href='friendlist.php?rate=2&friend_id=" .
+                                $value[0] . "&user_id=" . $user_id .
+                                "'><img src = 'images/rating2.png' alt = 'rating2'></a>
+                                        <a href='friendlist.php?rate=3&friend_id=" .
+                                $value[0] . "&user_id=" . $user_id .
+                                "'><img src = 'images/rating3.png' alt = 'rating3'></a>
+                                            <a href='friendlist.php?rate=4&friend_id=" .
+                                $value[0] . "&user_id=" . $user_id .
+                                "'><img src = 'images/rating4.png' alt = 'rating4'></a>
+                                            <a href='friendlist.php?rate=5&friend_id=" .
+                                $value[0] . "&user_id=" . $user_id .
+                                "'><img src = 'images/rating5.png' alt = 'rating5'></a>
+                            </td>
+                        </tr>";
+                }
             }
-        }
-        ?>
-    </table>
-</body>
+            ?>
+        </table>
+    </div>
+    <?php include "footer_login.php" ?>
 
-<?php include "footer_login.php" ?>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 
 </html>

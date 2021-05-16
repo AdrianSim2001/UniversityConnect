@@ -245,8 +245,6 @@ foreach ($not_user_friends_pagination as $key => $value) {
 
 $_SESSION['user_friends2'] = $user_friends;
 
-echo "<p></p>";
-
 @mysqli_close($conn);
 ?>
 
@@ -264,28 +262,38 @@ echo "<p></p>";
     <meta name="author" content="Adrian Sim Huan Tze">
     <meta name="description" content="Assignment 2">
     <meta name="keywords" content="job, vacancy, posting">
+    <link rel="icon" href="images/companylogo.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="icon" href="images/icon.png">
 </head>
 
-<header>
-
-    <img src='images/companylogo.png' alt='icon'>
-    <td><a href="friendlist.php">Friend Lists</a></td>
-    <td><a href="posting.php">Discussion</a></td>
-    <td><a href="logout.php">Log Out</a></td>
-
-</header>
-
 <body>
+    <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand"><img src='images/companylogoNoText.png' alt='icon'><span class="company-name">University Connect</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto mr-md-3">
+                    <li class="nav-item"><a href="friendlist.php" class="nav-link">Friend Lists</a></li>
+                    <li class="nav-item active"><a href="friendadd.php" class="nav-link">Add Friends</a></li>
+                    <li class="nav-item"><a href="posting.php" class="nav-link">Discussion</a></li>
+                    <li class="nav-item"><a href="logout.php" class="nav-link">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <h1>
-        University Connect
-    </h1>
+    <h1>Add Friends</h1>
 
     <div class="text">
-        <h2><?php echo $profile_name . "'s Add Friend List" ?></h2>
-        <p class="friendlist"><?php echo "Total number of friends is " . $num_of_friends ?></p>
+        <h2>Hey <?php echo $profile_name ?>, add your friend now !!!</h2>
+        <p class="friendlist"><?php echo "Total number of friends: " . $num_of_friends ?></p>
     </div>
 
     <table id="addfriendTable">
@@ -305,44 +313,48 @@ echo "<p></p>";
         ?>
     </table>
 
-    <table id="pagination">
-        <?php
-        echo "<tr>
-                    <td>
-                        <a href = 'friendadd.php?pageno=1&user_id=" . $user_id .
-            "&num_of_friends=" . $num_of_friends . "'>First</a>
-                    </td>";
-        if ($pageno <= 1) {
-            echo "
-                    <td>Previous</td>";
-        } else {
-            echo "
-                    <td>
-                        <a href = 'friendadd.php?pageno=" . ($pageno - 1) . "&user_id=" . $user_id .
-                "&num_of_friends=" . $num_of_friends . "'>Previous</a>
-                    </td>";
-        }
-        if ($pageno >= $last_page) {
-            echo "
-                    <td>Next</td>";
-        } else {
-            echo "
-                    <td>
-                        <a href = 'friendadd.php?pageno=" . ($pageno + 1) . "&user_id=" . $user_id .
-                "&num_of_friends=" . $num_of_friends . "'>Next</a>
-                    </td>";
-        }
-        echo "
-                    <td>
-                        <a href = 'friendadd.php?pageno=" . $last_page . "&user_id=" . $user_id .
-            "&num_of_friends=" . $num_of_friends . "'>Last</a>
-                    </td>
-                    </tr>";
-        ?>
+    <table id="pre-next-nav">
+        <tr>
+            <?php
+            if ($pageno <= 1) {
+                echo "
+                        <td class='nav-inactive'><button disabled>First</button></td>
+                        <td class='nav-inactive'><button disabled>Previous</button></td>";
+            } else {
+                echo "
+                        <td>
+                            <a href = 'friendadd.php?pageno=1&user_id=" . $user_id .
+                            "&num_of_friends=" . $num_of_friends . "'><button>First</button></a>
+                        </td>
+                        <td>
+                            <a href = 'friendadd.php?pageno=" . ($pageno - 1) . "&user_id=" . $user_id .
+                            "&num_of_friends=" . $num_of_friends . "'><button>Previous</button></a>
+                        </td>";
+            }
+            if ($pageno >= $last_page) {
+                echo "
+                        <td class='nav-inactive'><button disabled>Next</button></td>
+                        <td class='nav-inactive'><button disabled>Last</button></td>";
+            } else {
+                echo "
+                        <td>
+                            <a href = 'friendadd.php?pageno=" . ($pageno + 1) . "&user_id=" . $user_id .
+                            "&num_of_friends=" . $num_of_friends . "'><button>Next</button></a>
+                        </td>
+                        <td>
+                            <a href = 'friendadd.php?pageno=" . $last_page . "&user_id=" . $user_id .
+                            "&num_of_friends=" . $num_of_friends . "'><button>Last</button></a>
+                        </td>";
+            }
+            ?>
+        </tr>
     </table>
+    <?php include 'footer_login.php' ?>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
-<?php include 'footer_login.php' ?>
 
 </html>

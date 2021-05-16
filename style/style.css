@@ -407,24 +407,27 @@ form input[type=reset]:hover {
   padding-bottom: 10px;
 }
 
+.friendlist-container {
+  border: 2px solid #375296;
+  border-radius: 50px !important;
+  width: 70%;
+  min-width: 1000px;
+  margin: 0 auto 100px auto;
+}
+
 table {
-  border: #375296 solid 2px;
-  border-radius: 50px;
-  padding: 30px 30px;
-  margin: 0 auto;
-  margin-bottom: 120px;
   width: 70%;
 }
 
 #friendlist {
-  margin: 100px auto;
+  margin: 30px auto;
 }
 
 #friendlist .unfriend {
   background-color: #e7ae3c;
   color: #fffaf0;
-  padding: 15px;
-  border-radius: 20px;
+  padding: 15px 25px;
+  border-radius: 50px;
 }
 
 #friendlist .unfriend:hover {
@@ -438,7 +441,7 @@ table {
 
 table td {
   color: black;
-  padding: 20px 20px;
+  padding: 20px 0;
   margin: 0 auto;
   text-align: left;
 }
@@ -463,8 +466,8 @@ table#version {
   background-color: #8191bc;
   margin-bottom: 20px;
   border-bottom: #fffaf0 solid 15px;
-  border-radius: 11px;
   color: #fffaf0;
+  text-align: center;
 }
 
 #addfriendTable a {
@@ -478,6 +481,25 @@ table#version {
   background-color: white;
   color: #e7ae3c;
   transition: 0.8s;
+}
+
+table#pre-next-nav {
+  margin: 0 auto 10px auto;
+}
+
+table#pre-next-nav td {
+  text-align: center;
+  width: 5vw;
+}
+
+table#pre-next-nav td button{
+  color: white;
+  background-color: #375296;
+  width: 150px;
+}
+
+table#pre-next-nav td.nav-inactive button{
+  background-color: #37529686;
 }
 
 /* Footer style */

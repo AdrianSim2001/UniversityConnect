@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Adrian Sim Huan Tze">
     <meta name="description" content="Assignment 2">
-    <meta name="keywords" content="job, vacancy, posting">    
+    <meta name="keywords" content="job, vacancy, posting">
     <link rel="icon" href="images/companylogo.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
