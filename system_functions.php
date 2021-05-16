@@ -78,8 +78,8 @@ function chkEmail($input)
                 die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
             }
 
-            // change default database to '101225244' database
-            $dbSelect = @mysqli_select_db($conn, 101225244);
+            // change default database to 'universityconnect' database
+            $dbSelect = @mysqli_select_db($conn, 'universityconnect');
 
             if (!$dbSelect) {
                 die("<p>The database is not available.</p>");
@@ -192,8 +192,8 @@ function ChkEmailPasswordForLogin($emailInput, $passwordInput)
         die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
     }
 
-    // change default database to '101225244' database
-    $dbSelect = @mysqli_select_db($conn, 101225244);
+    // change default database to 'universityconnect' database
+    $dbSelect = @mysqli_select_db($conn, 'universityconnect');
 
     if (!$dbSelect) {
         die("<p>The database is not available.</p>");
@@ -256,8 +256,8 @@ function Unfriend($friend_id, $user_id)
         die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
     }
 
-    // change default database to '101225244' database
-    $dbSelect = @mysqli_select_db($conn, 101225244);
+    // change default database to 'universityconnect' database
+    $dbSelect = @mysqli_select_db($conn, 'universityconnect');
 
     if (!$dbSelect) {
         die("<p>The database is not available.</p>");
@@ -298,8 +298,8 @@ function Ratefriend($friend_id, $user_id, $rating)
         die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
     }
 
-    // change default database to '101225244' database
-    $dbSelect = @mysqli_select_db($conn, 101225244);
+    // change default database to 'universityconnect' database
+    $dbSelect = @mysqli_select_db($conn, 'universityconnect');
 
     if (!$dbSelect) {
         die("<p>The database is not available.</p>");
@@ -342,8 +342,8 @@ function Addfriend($friend_id, $user_id, $user_friends)
             die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
         }
 
-        // change default database to '101225244' database
-        $dbSelect = @mysqli_select_db($conn, 101225244);
+        // change default database to 'universityconnect' database
+        $dbSelect = @mysqli_select_db($conn, 'universityconnect');
 
         if (!$dbSelect) {
             die("<p>The database is not available.</p>");

@@ -3,5 +3,5 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = 101225244;
+    $dbname = "universityconnect";
 ?>

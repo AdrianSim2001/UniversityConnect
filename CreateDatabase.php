@@ -15,7 +15,7 @@ if (!$conn) {
     die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
 }
 
-$sql = "CREATE DATABASE `101225244`";
+$sql = "CREATE DATABASE `universityconnect`";
 
 if (@mysqli_query($conn, $sql)) {
     false;

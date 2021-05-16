@@ -17,8 +17,8 @@ if (!$conn) {
 die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
 }
 
-// change default database to '101225244' database
-$dbSelect = @mysqli_select_db($conn, 101225244);
+// change default database to 'universityconnect' database
+$dbSelect = @mysqli_select_db($conn, 'universityconnect');
 
 if (!$dbSelect) {
 die("<p>The database is not available.</p>");
