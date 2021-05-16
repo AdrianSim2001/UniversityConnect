@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    include "system_functions.php";
+session_start();
+include "system_functions.php";
 if (!isset($_SESSION['profile_name'])) {
     header("Location: index.php");
 } else {

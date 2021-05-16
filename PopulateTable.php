@@ -1,4 +1,3 @@
-<div>
 <?php
 include_once "settings.php";
 include "system_functions.php";
@@ -54,4 +53,3 @@ if ($row <= 0) {
 
 @mysqli_close($conn);
 ?>
-</div>
