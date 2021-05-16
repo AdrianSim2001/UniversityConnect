@@ -1,18 +1,20 @@
 /*
-Author: Adrian Sim Huan Tze
+Author: Adrian Sim Huan Tze, Kenny Tan Chee Lun
 Created: 28 September 2020
-Last modified: 3 October 2020
+Last modified: May 2021
 Description: Assignment 1
 */
 
-/* navigation style */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #fffaf0;
+} */
+
+body {
   background-color: #fffaf0;
 }
 
@@ -44,7 +46,7 @@ header {
   margin-right: auto;
   border-radius: 150px;
 }
-
+/* 
 nav ul {
   list-style: none;
 }
@@ -56,7 +58,7 @@ nav ul li {
 
 nav ul li a {
   transition: all 0.3s ease 0s;
-}
+} */
 
 button {
   padding: 9px 25px;
@@ -71,10 +73,46 @@ button:hover {
   background-color: rgba(0, 136, 169, 0.8);
 }
 
-/* Header Style */
+/* Navigation style */
 
+.navbar {
+  border-radius: 0;
+  padding: 0 30px;
+  background-color: rgb(247, 247, 247);
+}
+
+.navbar .company-name{
+  text-transform: capitalize;
+  margin-left: 20px;
+  color: #375296 !important;
+}
+
+.navbar .nav-item a {
+  text-transform: capitalize !important;
+  color: #000 !important;
+  font-size: 20px !important;
+}
+
+.navbar .nav-item a:hover {
+  color: #ff7b00a2 !important;
+}
+
+.navbar .navbar-brand:hover .company-name {
+  color: #375296cc !important;
+}
+
+.navbar .nav-item.active a {
+  color: #ff7b00 !important;
+}
+
+.navbar img{
+  width: 80px;
+}
+
+/* Header Style */
+/* 
 header img {
-  margin-right: 500px;
+  margin-right: 200px;
   max-width: 100px;
 }
 
@@ -112,7 +150,7 @@ header div a.active {
   border-bottom: 5px solid #142c6b;
   background-color: #445eac;
   color: white;
-}
+} */
 
 /* Body style */
 
@@ -151,7 +189,7 @@ body h1 {
   border: none;
   border-radius: 50px;
   justify-content: center;
-  margin: 100px auto 50px auto;
+  margin: 20px auto;
   text-align: center;
 }
 
@@ -264,7 +302,7 @@ form {
   font-family: "Montserrat", sans-serif;
   background-color: white;
   color: #375296;
-  margin-bottom: 300px;
+  margin: 80px auto;
   padding-bottom: 30px;
 }
 
@@ -392,8 +430,7 @@ table {
 }
 
 #friendlist {
-  margin-bottom: 100px auto;
-  margin-top:20px;
+  margin: 100px auto;
 }
 
 #friendlist .unfriend {
@@ -570,103 +607,4 @@ div.about-container p:nth-child(odd) img{
 div.about-container p:nth-child(even) img{
   margin-right: 30px;
   float: left;
-}
-
-/*Posting.php*/
-div#result{
-  height:100%;
-  width:100%;
-  border-radius: 10px;
-  background-color: #bcbcd4;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-div#result-wrapper{
-  background-color: aliceblue;
-  padding: 10px;
-  border-radius:20px;
-  border:none;
-  height:400px;
-}
-
-div#container{
-  background-color: #edb138;
-  width:70%;
-  margin-left:200px;
-  margin-bottom: 100px;
-  padding: 30px;
-  border: solid 5px black;
-  border-radius: 20px;
-}
-
-div.chats{
-  max-height: 40px;
-  background-color: inherit;
-  width: 90%;
-  margin-bottom: 70px;
-  padding: 0px;
-}
-
-div.chats p{
-  margin-bottom: 0px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 90%;
-  border-radius: 5px;
-  background-color: #345195;
-  color: white;
-  font-size: medium;
-}
-
-div.chats p#msg{
-  margin-top: 20px;
-}
-
-
-div.chats p strong{
-  background-color: inherit;
-  color: white;
-}
-
-div#container form{
-  margin-bottom: 0px;
-  margin-top: 30px;
-  margin-left: 100px;
-  padding: 0px;
-  width: 80%;
-}
-
-
-div#container form textarea{
-  width: 90%;
-  height: 100px;
-  margin-left: 30px;
-  margin-bottom: 0px;
-  border: 3px solid #98785f;
-  border-radius: 20px;
-  padding: 20px;
-  font-size:normal;
-  font-family: "Montserrat", sans-serif;
-}
-
-div#container form input[type='submit']{
-  margin-top: 0;
-  margin-bottom: 10px;
-  margin-left: 400px;
-  padding: 5px 0;
-}
-
-div#container form div.form-btn,
-div#container form div.form-text{
-  background-color: inherit;
-  width: 100%;
-  padding: 0;
-  border-radius: inherit;
-  margin-top: 15px;
-}
-
-div#discussion h2{
-  margin-left: 200px;
-  font-size: xx-large
 }
