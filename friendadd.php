@@ -281,7 +281,11 @@ $_SESSION['user_friends2'] = $user_friends;
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto mr-md-3">
                     <li class="nav-item"><a href="friendlist.php" class="nav-link">Friend Lists</a></li>
-                    <li class="nav-item active"><a href="friendadd.php" class="nav-link">Add Friends</a></li>
+                    <li class="nav-item active"><?php
+                        echo "<a class = 'navigate nav-link' href='friendadd.php?user_id=" .
+                            $user_id . "&num_of_friends=" .
+                            $num_of_friends . "'>Add Friends</a>"
+                        ?></li>
                     <li class="nav-item"><a href="posting.php" class="nav-link">Discussion</a></li>
                     <li class="nav-item"><a href="logout.php" class="nav-link">Log Out</a></li>
                 </ul>
