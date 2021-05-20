@@ -639,8 +639,7 @@ div#result-wrapper{
 div#container{
   background-color: #edb138;
   width:70%;
-  margin-left:200px;
-  margin-bottom: 100px;
+  margin: 0 auto 100px auto;
   padding: 30px;
   border: solid 5px black;
   border-radius: 20px;
