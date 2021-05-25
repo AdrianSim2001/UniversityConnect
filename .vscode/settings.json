@@ -1,0 +1,11 @@
+{
+    "vsicons.associations.fileDefault.file_light": null,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "phpunit.php": "C:\\xampp\\php\\php.exe",
+    "phpunit.phpunit": "C:/xampp/htdocs/talentsuite/htdocs/vendor/phpunit/phpunit/phpunit",
+    "phpunit.args": [
+    "--configuration", "C:\\xampp\\htdocs\\talentsuite\\htdocs\\phpunit.xml",
+    "--testdox"
+    ]
+
+}
