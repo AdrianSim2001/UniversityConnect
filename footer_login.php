@@ -1,5 +1,5 @@
 <footer>
-    <a class='footerAnchor' href='logout.php'><img src = 'images/companylogo.png' alt='icon'></a>
+    <a class='footerAnchor' href=''><img src = 'images/companylogo.png' alt='icon'></a>
     <table id = 'footer'>
         <thead>
             <tr>
@@ -10,7 +10,10 @@
         </thead>
         <tbody>
             <tr>
-                <td><a class='footerAnchor' href='logout.php'>Log Out</a></td>
+                <td>
+                    <a class='footerAnchor' href='posting.php'>Discussion</a><br/><br/>
+                    <a class='footerAnchor' href='logout.php'>Log Out</a><br/><br/>
+                </td>
                 <td><a class='footerAnchor' href = 'mailto:universityconnect@gmail.com'>Contact Us</a></td>
                 <td>
                     <ul>

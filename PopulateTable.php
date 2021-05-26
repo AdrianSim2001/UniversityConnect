@@ -47,7 +47,7 @@ if ($row <= 0) {
     $result1 = populatetables_myfriends($conn, $myfriends_id);
 
     if ($result1 && $result) {
-        echo "<p>Tables successfully created and populated</p>";
+        // echo "<p>Tables successfully created and populated</p>";
     }
 }
 
