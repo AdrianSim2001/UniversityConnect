@@ -230,7 +230,7 @@ function ChkEmailPasswordForLogin($emailInput, $passwordInput)
 
         if ($row <= 0) {
             $error = "email";
-            $login_msg = "Cannot find your account. Please register before you login.";
+            $login_msg = "Cannot find your account.";
             $LoginOK = false;
             $profile = "";
         } else if ($row == 1) {
