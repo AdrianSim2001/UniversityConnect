@@ -234,7 +234,6 @@ function ChkEmailPasswordForLogin($emailInput, $passwordInput)
             $LoginOK = false;
             $profile = "";
         } else if ($row == 1) {
-            $profile = $row[3];
             $row = mysqli_fetch_row($queryResult);
             if ($row[2] == $login_password) {
                 $LoginOK = true;
